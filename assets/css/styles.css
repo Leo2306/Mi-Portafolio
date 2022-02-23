@@ -1,0 +1,37 @@
+:root {
+    /** COLORES **/
+    --Principal: #FFFF44;
+    --Secundario: #0000F4;
+    --Negro: #000000;
+    --Blanco: #FFFFFF;
+    --gris: #4F4F4F;
+
+    /** FUENTES **/
+    --fuenteTitulos: 'Dosis', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem --- 10px*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuenteTitulos);
+}
