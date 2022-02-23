@@ -30,8 +30,30 @@ body {
 
 a {
     text-decoration: none;
+    color: var(--Negro);
+}
+
+li {
+    list-style: none;
 }
 
 h1, h2, h3, h4 {
     font-family: var(--fuenteTitulos);
+}
+
+/* HEADER */
+
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navegacion,
+.navegacion-items {
+    font-family: var(--fuenteTitulos);
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

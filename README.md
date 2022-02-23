@@ -14,4 +14,5 @@ Portafolio personal, en el mismo se detalla:
 
 5. Finalmente, podrá acceder a una nueva pestaña donde se mostrará mi curriculum.
 
-- Para el desarrollo del mismo se utilizara HTML, CSS Y Javascript.
+
+- Para el desarrollo del mismo se utilizará HTML, CSS Y Javascript.
