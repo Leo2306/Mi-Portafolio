@@ -2,7 +2,7 @@
 
 ## Desarrollo:
 
-### Portafolio personal, en el mismo se detalla:
+Portafolio personal, en el mismo se detalla:
 
 1. Información sobre mí como el Nombre, Edad, Nacionalidad, foto de perfil y un poco de mi Biografía;
 
