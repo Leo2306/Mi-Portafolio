@@ -8,7 +8,7 @@
 
     /** FUENTES **/
     --fuenteTitulos: 'Dosis', sans-serif;
-    --fuenteParrafos: 'Open Sans', sans-serif;
+    --fuenteParrafos: 'Raleway', sans-serif;
 }
 
 html {
@@ -49,11 +49,30 @@ h1, h2, h3, h4 {
     margin: 0 auto;
 }
 
+.logo-nombre {
+    font-size: 3rem;
+    margin: 1rem;
+}
+
 .navegacion,
 .navegacion-items {
     font-family: var(--fuenteTitulos);
-    font-weight: 700;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.navegacion-enlace {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+}
+
+.titulo {
+    font-family: var(--fuenteParrafos);
+    font-weight: normal;
+}
+
+.texto-bold {
+    font-weight: bold;
+    text-transform: capitalize;
 }
