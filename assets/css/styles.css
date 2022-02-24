@@ -43,6 +43,18 @@ h1, h2, h3, h4 {
 
 /* HEADER */
 
+.header {
+    background-image: url(../img/bg-principal.png);
+    background-size: cover;
+    height: 100vh;
+    max-width: 1980px;
+    width: 100%;
+}
+
+.header__texto {
+
+}
+
 .contenedor {
     max-width: 120rem;
     width: 90%;
