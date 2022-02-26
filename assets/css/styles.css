@@ -1,8 +1,8 @@
 :root {
     /** COLORES **/
-    --Principal: #FFFF44;
+    --Principal: #29D882;
     --Secundario: #0000F4;
-    --Negro: #000000;
+    --Negro: #171C23;
     --Blanco: #FFFFFF;
     --gris: #4F4F4F;
 
@@ -22,7 +22,7 @@ html {
 
 body {
     font-family: var(--fuenteParrafos);
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 2;
     margin: 0;
     padding: 0;
@@ -30,7 +30,7 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--Negro);
+    color: var(--Blanco);
 }
 
 li {
@@ -41,18 +41,15 @@ h1, h2, h3, h4 {
     font-family: var(--fuenteTitulos);
 }
 
-/* HEADER */
-
-.header {
-    background-image: url(../img/bg-principal.png);
-    background-size: cover;
-    height: 100vh;
-    max-width: 1980px;
-    width: 100%;
+h1 {
+    font-size: 4.8rem;
 }
 
-.header__texto {
+/*----------- HEADER -----------*/
 
+.header {
+    background: linear-gradient(to right, #171c23 60%, #29D882 100%);
+    min-height: 100vh;
 }
 
 .contenedor {
@@ -61,30 +58,20 @@ h1, h2, h3, h4 {
     margin: 0 auto;
 }
 
-.logo-nombre {
-    font-size: 3rem;
-    margin: 1rem;
-}
-
-.navegacion,
-.navegacion-items {
+.boton {
     font-family: var(--fuenteTitulos);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navegacion-enlace {
-    padding: 1rem 2rem;
-    text-transform: uppercase;
-}
-
-.titulo {
-    font-family: var(--fuenteParrafos);
-    font-weight: normal;
-}
-
-.texto-bold {
     font-weight: bold;
-    text-transform: capitalize;
+    color: var(--Negro);
+    background-color: var(--Principal);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: .2rem solid #21272F;
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: var(--Negro);
+    color: #29D882;
+    border-color: var(--Principal);
+    transition: .3s;
 }
