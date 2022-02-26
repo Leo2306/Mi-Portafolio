@@ -6,6 +6,7 @@ const menuNavegacion = document.getElementById("navegacion-menu"),
 if(toggleNavegacion) {
     toggleNavegacion.addEventListener("click", function() {
         menuNavegacion.classList.add("show");
+        menuClose.classList.add("show-close")
         contacto.classList.add("show");
     })
 }
@@ -13,6 +14,7 @@ if(toggleNavegacion) {
 if(menuClose) {
     menuClose.addEventListener("click", function() {
     menuNavegacion.classList.remove("show");
+    menuClose.classList.remove("show-close")
     contacto.classList.remove("show");
     })
 }

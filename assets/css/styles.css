@@ -128,12 +128,16 @@ h1 {
 }
 
 .navegacion__close {
+    display: none;
     position: absolute;
-    top: 2.5rem;
+    top: 1rem;
     right: 2.5rem;
     cursor: pointer;
-    color: var(--negro);
-    height: 5rem;
+    color: var(--principal);
+    background-color: var(--negro);
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
 }
 
 .navegacion__toggle {
@@ -143,8 +147,6 @@ h1 {
     cursor: pointer;
     width: 4rem;
     height: 4rem;
-    text-align: center;
-    vertical-align: middle;
     border-radius: 50%;
 }
 
@@ -190,6 +192,9 @@ h1 {
         width: 3rem;
         font-size: 1.5rem;
     }
+    .navegacion__titulo {
+        font-size: 3rem;
+    }
     .navegacion__menu {
         padding-left: 5rem;
     }
@@ -200,7 +205,9 @@ h1 {
 
 @media (max-width: 992px) {
     .navegacion__toggle {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .navegacion__contacto {
@@ -232,4 +239,10 @@ h1 {
 
 .show {
     right: 0;
+}
+
+.show-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
