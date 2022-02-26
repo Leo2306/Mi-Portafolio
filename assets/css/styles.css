@@ -1,10 +1,10 @@
 :root {
     /** COLORES **/
     --Principal: #29D882;
-    --Secundario: #0000F4;
+    --Secundario: #00bd95;
     --Negro: #171C23;
     --Blanco: #FFFFFF;
-    --gris: #4F4F4F;
+    --gris: #88949B;
 
     /** FUENTES **/
     --fuenteTitulos: 'Dosis', sans-serif;
@@ -58,12 +58,80 @@ h1 {
     margin: 0 auto;
 }
 
+.logo {
+    text-align: center;
+    width: 4rem;
+    background-color: var(--Principal);
+    border-radius: 0px 5px 5px 5px;
+    padding: .5rem;
+}
+
+.shadow {
+    box-shadow: 0px 0px 10px 3px rgba(136,148,155,0.75);
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(136,148,155,0.75);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(136,148,155,0.75);
+}
+
+.logo__texto {
+    color: var(--Negro);
+    font-family: var(--fuenteParrafos);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navegacion-items {
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+}
+
+.navegacion-enlace {
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.navegacion-enlace::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, var(--Principal), var(--Secundario), var(--Blanco));
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+.navegacion-enlace:hover::before {
+    transform: scaleX(1);
+}
+
+.contacto{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+
+.icono__item {
+    color: var(--Negro);
+}
+
 .boton {
     font-family: var(--fuenteTitulos);
     font-weight: bold;
+    font-size: 1.5rem;
     color: var(--Negro);
-    background-color: var(--Principal);
-    padding: 1.5rem;
+    background-color: transparent;
+    padding: 1rem;
     border-radius: 1rem;
     border: .2rem solid #21272F;
 }
