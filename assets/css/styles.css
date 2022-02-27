@@ -195,7 +195,7 @@ h1 {
     align-items: center;
 }
 
-.header__hexagono {
+.header__hexagonoV {
     grid-column: 1 / 2;
     width: 70%;
 }
@@ -214,6 +214,12 @@ h1 {
     margin-top: 5rem;
     font-size: 3.6rem;
     line-height: 1.5;
+}
+
+.header__subtitulo {
+    margin: 0;
+    font-weight: normal;
+    font-size: 2.8rem;
 }
 
 .header__img {
@@ -245,7 +251,7 @@ h1 {
     transition: .3s;
 }
 
-.header__poligono {
+.header__hexagonoH {
     grid-column: 4 / 5;
     width: 100%;
     position: relative;
@@ -285,6 +291,9 @@ h1 {
     .header__titulo {
         font-size: 2.8rem;
     }
+    .header__subtitulo {
+        font-size: 2.4rem;
+    }
     .header__parrafo {
         font-size: 1.6rem;
     }
@@ -294,6 +303,10 @@ h1 {
 }
 
 @media (max-width: 992px) {
+
+    .header {
+        background: linear-gradient(to right, var(--negro) 75%, var(--principal) 100%);
+    }
 
     .navegacion__lista {
         display: flex;
@@ -347,7 +360,7 @@ h1 {
         align-items: center;
         margin-top: 0;
     }
-    .header__hexagono {
+    .header__hexagonoV {
         grid-column: 1 / 2;
         width: 65%;
     }
@@ -356,6 +369,9 @@ h1 {
     }
     .header__titulo {
         margin-top: 1rem;
+    }
+    .header__parrafo {
+        width: 85%;
     }
     .header__img {
         grid-column: 2 / 3;
@@ -368,7 +384,7 @@ h1 {
         top: -10rem;
         right: -10rem;
     }
-    .header__poligono {
+    .header__hexagonoH {
         grid-column: 3 / 4;
         width: 80%;
     }
@@ -381,7 +397,7 @@ h1 {
         align-items: center;
         margin-top: 0;
     }
-    .header__hexagono {
+    .header__hexagonoV {
         width: 80%;
     }
     .header__texto {
@@ -408,7 +424,7 @@ h1 {
         top: -5rem;
         right: -5rem;
     }
-    .header__poligono {
+    .header__hexagonoH {
         display: none;
     }
 }
@@ -420,7 +436,7 @@ h1 {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
     }
-    .header__hexagono {
+    .header__hexagonoV {
         display: none;
     }
     .header__texto {
@@ -428,6 +444,9 @@ h1 {
         text-align: center;
         margin-top: 1rem;
         grid-row: 2 / 3;
+    }
+    .header__parrafo {
+        width: 100%;
     }
     .header__boton {
         margin: 0 auto;
