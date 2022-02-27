@@ -1,5 +1,5 @@
 :root {
-    /** COLORES **/
+    /*--- COLORES ---*/
     --principal: #29D882;
     --secundario: #00BD95;
     --negro: #171C23;
@@ -7,7 +7,7 @@
     --blanco: #FFFFFF;
     --gris: #88949B;
 
-    /** FUENTES **/
+    /*--- FUENTES ---*/
     --fuenteTitulos: 'Dosis', sans-serif;
     --fuenteParrafos: 'Raleway', sans-serif;
 }
