@@ -1,3 +1,5 @@
+/*----------- GLOBAL -----------*/
+
 :root {
     /*--- COLORES ---*/
     --principal: #29D882;
@@ -259,7 +261,6 @@ h1 {
     justify-self: end;
 }
 
-
 /* ------ MEDIA QUERIES ------ */
 
 @media (max-width: 1200px) {
@@ -307,7 +308,6 @@ h1 {
     .header {
         background: linear-gradient(to right, var(--negro) 75%, var(--principal) 100%);
     }
-
     .navegacion__lista {
         display: flex;
         flex-direction: column;
@@ -315,13 +315,11 @@ h1 {
         margin-top: 4rem;
         padding: 0;
     }
-    
     .navegacion__toggle {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
     .navegacion__contacto {
         position: fixed;
         top: 45%;
@@ -335,7 +333,6 @@ h1 {
         justify-content: center;
         gap: 3rem;
     }
-
     .navegacion__menu {
         display: block;
         position: fixed;
@@ -414,7 +411,6 @@ h1 {
         width: 30%;
         text-align: center;
     }
-
     .header__img {
         width: 70%;
         grid-column: 2 / 3;
