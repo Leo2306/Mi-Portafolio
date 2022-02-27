@@ -3,6 +3,7 @@
     --principal: #29D882;
     --secundario: #00BD95;
     --negro: #171C23;
+    --negroSecundario: #21272F;
     --blanco: #FFFFFF;
     --gris: #88949B;
 
@@ -54,7 +55,7 @@ h1 {
 /* ----------- HEADER ----------- */
 
 .header {
-    background: linear-gradient(to right, #171c23 60%, #29D882 100%);
+    background: linear-gradient(to right, var(--negro) 65%, var(--principal) 100%);
     min-height: 100vh;
     z-index: 100;
 }
@@ -80,17 +81,18 @@ h1 {
     font-weight: bold;
     width: 4rem;
     border-radius: 0px 5px 5px 5px;
-    padding: .5rem;
+    padding: .1rem;
+    margin: 0;
     box-shadow: 0px 0px 10px 3px rgba(136,148,155,0.75);
     -webkit-box-shadow: 0px 0px 10px 3px rgba(136,148,155,0.75);
     -moz-box-shadow: 0px 0px 10px 3px rgba(136,148,155,0.75);
 }
 
 .navegacion__titulo {
-    font-size: 3.6rem;
+    font-size: 2.8rem;
     color: var(--blanco);
     padding-left: 1rem;
-    margin: 0;
+    padding-bottom: .5rem;
 }
 
 .navegacion__menu {
@@ -98,10 +100,12 @@ h1 {
 }
 .navegacion__lista {
     display: flex;
-    flex-direction: column;
-    row-gap: 2rem;
-    margin-top: 4rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
     padding: 0;
+    font-family: var(--fuenteTitulos);
+    text-transform: uppercase;
 }
 
 .navegacion__enlace {
@@ -130,8 +134,8 @@ h1 {
 .navegacion__close {
     display: none;
     position: absolute;
-    top: 1rem;
-    right: 2.5rem;
+    top: 2rem;
+    right: 2.8rem;
     cursor: pointer;
     color: var(--principal);
     background-color: var(--negro);
@@ -152,7 +156,6 @@ h1 {
 
 .navegacion__contacto {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 3rem;
@@ -171,13 +174,13 @@ h1 {
     background-color: transparent;
     padding: 1rem;
     border-radius: 1rem;
-    border: .2rem solid #21272F;
+    border: .2rem solid var(--negroSecundario);
 }
 
 .navegacion__boton:hover {
     cursor: pointer;
     background-color: var(--negro);
-    color: #29D882;
+    color: var(--principal);
     border-color: var(--principal);
     transition: .3s;
 }
@@ -185,6 +188,9 @@ h1 {
 /* ------ MEDIA QUERIES ------ */
 
 @media (max-width: 1200px) {
+    .header {
+        background: linear-gradient(to right, var(--negro) 65%, var(--principal) 100%);
+    }
     .contenedor {
         width: 95%;
     }
@@ -193,7 +199,7 @@ h1 {
         font-size: 1.5rem;
     }
     .navegacion__titulo {
-        font-size: 3rem;
+        font-size: 2.2rem;
     }
     .navegacion__menu {
         padding-left: 5rem;
@@ -201,9 +207,21 @@ h1 {
     .navegacion__enlace {
         font-size: 1.6rem;
     }
+    .navegacion__contacto {
+        gap: 1rem;
+    }
 }
 
 @media (max-width: 992px) {
+
+    .navegacion__lista {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        margin-top: 4rem;
+        padding: 0;
+    }
+    
     .navegacion__toggle {
         display: flex;
         justify-content: center;
@@ -216,6 +234,12 @@ h1 {
         right: -100%;
         transition: .4s;
         width: 60%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
     }
 
     .navegacion__menu {
@@ -223,7 +247,7 @@ h1 {
         position: fixed;
         width: 60%;
         height: 100%;
-        background: linear-gradient(to right, var(--negro) 10%, var(--secundario) 60%, #29D882 100%);
+        background: linear-gradient(to right, var(--negro) 10%, var(--secundario) 60%, var(--principal) 100%);
         top: 0;
         right: -100%;
         text-align: center;

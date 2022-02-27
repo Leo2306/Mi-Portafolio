@@ -9,49 +9,60 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Document</title>
 </head>
-<body>
 
+<body>
     <header class="header">
-                <div class="navegacion contenedor">
+
+        <div class="navegacion contenedor">
             
-                    <a class="navegacion__logo" href="index.html">
-                        <p class="navegacion__texto">LN</p>
-                        <h1 class="navegacion__titulo">Leonardo</h1>
+            <a class="navegacion__logo" href="index.html">
+                <p class="navegacion__texto">LN</p>
+                <h1 class="navegacion__titulo">Leonardo</h1>
+            </a>
+
+            <nav id="navegacion-menu" class="navegacion__menu">
+
+                    <ul class="navegacion__lista">
+                        <li class="navegacion__item"><a class="navegacion__enlace" href="#sobre-mi">Sobre Mí</a></li>
+                        <li class="navegacion__item"><a class="navegacion__enlace" href="#hobbies-&-skills">Skills</a></li>
+                        <li class="navegacion__item"><a class="navegacion__enlace" href="#hobbies-&-skills">Hobbies</a></li>                 
+                        <li class="navegacion__item"><a class="navegacion__enlace" href="#formacion">Formación</a></li>                 
+                        <li class="navegacion__item"><a class="navegacion__enlace" href="#experiencia">Proyectos</a></li>                 
+                    </ul>
+                    <div id="navegacion-close" class="navegacion__close">
+                        <i  class="fa-solid fa-xmark"></i>
+                    </div>
+
+            </nav>
+
+            <div id="navegacion-toggle" class="navegacion__toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div id="navegacion-contacto" class="navegacion__contacto">
+
+                <div class="iconos">
+
+                    <a href="#" class="fa-stack fa-1x navegacion__redes">
+                        <i class="fab fa-facebook-f fa-stack-1x"></i>
                     </a>
 
-                    <nav id="navegacion-menu" class="navegacion__menu">
+                    <a href="#" class="fa-stack fa-1x navegacion__redes">
+                        <i class="fab fa-twitter fa-stack-1x"></i>
+                    </a>
 
-                            <ul class="navegacion__lista">
-                                <li class="navegacion__item"><a class="navegacion__enlace" href="#sobre-mi">Sobre Mí</a></li>
-                                <li class="navegacion__item"><a class="navegacion__enlace" href="#hobbies-&-skills">Skills</a></li>
-                                <li class="navegacion__item"><a class="navegacion__enlace" href="#hobbies-&-skills">Hobbies</a></li>                 
-                                <li class="navegacion__item"><a class="navegacion__enlace" href="#formacion">Formación</a></li>                 
-                                <li class="navegacion__item"><a class="navegacion__enlace" href="#experiencia">Proyectos</a></li>                 
-                            </ul>
-                            <div id="navegacion-close" class="navegacion__close">
-                                <i  class="fa-solid fa-xmark"></i>
-                            </div>
-                    </nav>
+                    <a href="#" class="fa-stack fa-1x navegacion__redes">
+                        <i class=" fab fa-instagram fa-stack-1x"></i>
+                    </a>
 
-                    <div id="navegacion-toggle" class="navegacion__toggle">
-                        <i class="fas fa-bars"></i>
-                    </div>
-
-                    <div id="navegacion-contacto" class="navegacion__contacto">
-                        <div class="iconos">
-                            <a href="#" class="fa-stack fa-1x navegacion__redes">
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                            <a href="#" class="fa-stack fa-1x navegacion__redes">
-                                <i class="fab fa-twitter fa-stack-1x"></i>
-                            </a>
-                            <a href="#" class="fa-stack fa-1x navegacion__redes">
-                                <i class=" fab fa-instagram fa-stack-1x"></i>
-                            </a>
-                        </div>
-                            <button class="navegacion__boton">CONTACTAME</button>
-                    </div>
                 </div>
+
+                    <button class="navegacion__boton">CONTACTAME</button>
+
+            </div>
+
+        </div>
+
     </header>
 
     <script src="https://kit.fontawesome.com/b545c92e40.js" crossorigin="anonymous"></script>
