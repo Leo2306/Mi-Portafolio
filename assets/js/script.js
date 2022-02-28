@@ -6,8 +6,9 @@ const menuNavegacion = document.getElementById("navegacion-menu"),
 if(toggleNavegacion) {
     toggleNavegacion.addEventListener("click", function() {
         menuNavegacion.classList.add("show");
-        menuClose.classList.add("show-close")
+        menuClose.classList.add("show-close");
         contacto.classList.add("show");
+        toggleNavegacion.setAttribute("style","z-index: 0");
     })
 }
 

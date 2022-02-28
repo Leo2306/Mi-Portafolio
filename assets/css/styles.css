@@ -44,10 +44,6 @@ h1, h2, h3, h4 {
     font-family: var(--fuenteTitulos);
 }
 
-h1 {
-    font-size: 4.8rem;
-}
-
 .contenedor {
     max-width: 120rem;
     width: 90%;
@@ -57,7 +53,7 @@ h1 {
 /* ----------- HEADER ----------- */
 
 .header {
-    background: linear-gradient(to right, var(--negro) 65%, var(--principal) 100%);
+    background: linear-gradient(to right, var(--negro) 68%, var(--principal) 68%, var(--principal) 100%);
     min-height: 100vh;
     z-index: 100;
 }
@@ -115,6 +111,8 @@ h1 {
 .navegacion__enlace {
     position: relative;
     padding-bottom: 1rem;
+    letter-spacing: .2rem;
+    font-size: 1.6rem;
 }
 
 .navegacion__enlace::before {
@@ -261,11 +259,52 @@ h1 {
     justify-self: end;
 }
 
+/* ------ ABOUT ------ */
+
+.section-about {
+    background-color: var(--negroSecundario);
+    height: 100vh;
+}
+
+.about__titulo {
+    color: var(--principal);
+    font-size: 2.8rem;
+    padding: 3rem;
+    text-align: center;
+    margin: 0;
+}
+
+.about__info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.about__img {
+    width: 90%;
+    height: 75%;
+    margin: 0 auto;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.about__texto {
+    color: var(--gris);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about__subtitulo {
+    font-size: 2.2rem;
+    color: var(--blanco);
+}
+
+
+
 /* ------ MEDIA QUERIES ------ */
 
 @media (max-width: 1200px) {
     .header {
-        background: linear-gradient(to right, var(--negro) 65%, var(--principal) 100%);
+        background: linear-gradient(to right, var(--negro) 70%, var(--principal) 70%, var(--principal) 100%);
     }
     .contenedor {
         width: 95%;
@@ -281,7 +320,7 @@ h1 {
         padding-left: 5rem;
     }
     .navegacion__enlace {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
     .navegacion__contacto {
         gap: 1rem;
@@ -307,7 +346,7 @@ h1 {
 @media (max-width: 992px) {
 
     .header {
-        background: linear-gradient(to right, var(--negro) 75%, var(--principal) 100%);
+        background: linear-gradient(to right, var(--negro) 75%, var(--principal) 75%, var(--principal) 100%);
     }
     .navegacion__lista {
         display: flex;
@@ -320,6 +359,7 @@ h1 {
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 100;
     }
     .navegacion__contacto {
         position: fixed;
@@ -339,7 +379,7 @@ h1 {
         position: fixed;
         width: 60%;
         height: 100%;
-        background: linear-gradient(to right, var(--negro) 10%, var(--secundario) 60%, var(--principal) 100%);
+        background: linear-gradient(to right, var(--secundario) 60%, var(--principal) 100%);
         top: 0;
         right: -100%;
         text-align: center;
@@ -389,6 +429,13 @@ h1 {
 }
 
 @media (max-width: 768px) {
+    .header {
+        background: linear-gradient(to right, var(--negro) 70%, var(--negroSecundario) 100%);
+    }
+    .navegacion__toggle {
+        color: var(--negro);
+        background-color: var(--principal);
+    }
     .header__contenido {
         grid-template-columns: 1fr 4fr;
         grid-template-rows: 1fr 1fr;
