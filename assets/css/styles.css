@@ -2,8 +2,8 @@
 
 :root {
     /*--- COLORES ---*/
-    --principal: #29D882;
-    --secundario: #00BD95;
+    --principal: #FFD32D;
+    --secundario: #FFF89A;
     --negro: #171C23;
     --negroSecundario: #21272F;
     --blanco: #FFFFFF;
@@ -191,8 +191,9 @@ h1, h2, h3, h4 {
 
 .header__contenido {
     display: grid;
-    grid-template-columns: 1fr 3fr 2fr 1fr;
+    grid-template-columns: 1fr 3fr 2fr;
     align-items: center;
+    margin-top: 5rem;
 }
 
 .header__hexagonoV {
@@ -203,7 +204,7 @@ h1, h2, h3, h4 {
 .header__texto {
     color: var(--blanco);
     grid-column: 2 / 3;
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -212,8 +213,12 @@ h1, h2, h3, h4 {
 .header__titulo {
     margin: 0;
     margin-top: 5rem;
-    font-size: 3.6rem;
+    font-size: 2.8rem;
     line-height: 1.5;
+}
+
+.header__nombre {
+    font-size: 6.4rem;
 }
 
 .header__subtitulo {
@@ -222,12 +227,8 @@ h1, h2, h3, h4 {
     font-size: 2.8rem;
 }
 
-.header__img {
-    grid-column: 3 / 4;
-    width: 110%;
-    position: relative;
-    top: 20rem;
-    justify-self: center;
+.header__subtitulo span {
+    color: var(--principal);
 }
 
 .header__boton {
@@ -251,12 +252,23 @@ h1, h2, h3, h4 {
     transition: .3s;
 }
 
-.header__hexagonoH {
-    grid-column: 4 / 5;
-    width: 100%;
+.header__elementos {
+    display: flex;
+    justify-content: end;
+    align-items: baseline;
+}
+
+.header__puntos {
+    width: 30%;
     position: relative;
-    right: 0;
-    justify-self: end;
+    top: -18rem;
+}
+
+.header__hexagonoH {
+    grid-column: 3 / 4;
+    width: 50%;
+    position: relative;
+    top: 10rem;
 }
 
 /* ------ ABOUT ------ */
@@ -328,18 +340,20 @@ h1, h2, h3, h4 {
     .header__contenido {
         margin-top: 2rem;
     }
-    .header__titulo {
-        font-size: 2.8rem;
-    }
+    .header__titulo,
     .header__subtitulo {
         font-size: 2.4rem;
+    }
+    .header__nombre {
+        font-size: 5.4rem;
     }
     .header__parrafo {
         font-size: 1.6rem;
     }
-    .header__img {
-        width: 130%;
-        top: 20rem;
+    .header__puntos {
+        width: 30%;
+        position: relative;
+        top: -15rem;
     }
 }
 
@@ -394,9 +408,8 @@ h1, h2, h3, h4 {
     }
     .header__contenido {
         grid-template-columns: 1fr 3fr 1fr;
-        grid-template-rows: 1fr 1fr;
         align-items: center;
-        margin-top: 0;
+        margin-top: 5rem;
     }
     .header__hexagonoV {
         grid-column: 1 / 2;
@@ -408,19 +421,13 @@ h1, h2, h3, h4 {
     .header__titulo {
         margin-top: 1rem;
     }
-    .header__parrafo {
-        width: 85%;
+    .header__boton {
+        width: 30%;
     }
-    .header__img {
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
-        top: 0;
-        width: 75%;
+    .header__puntos {
+        width: 50%;
         position: relative;
-        justify-self: end;
-        align-self: flex-end;
-        top: -10rem;
-        right: -10rem;
+        right: -5rem;
     }
     .header__hexagonoH {
         grid-column: 3 / 4;
@@ -438,9 +445,7 @@ h1, h2, h3, h4 {
     }
     .header__contenido {
         grid-template-columns: 1fr 4fr;
-        grid-template-rows: 1fr 1fr;
         align-items: center;
-        margin-top: 0;
     }
     .header__hexagonoV {
         width: 80%;
@@ -459,26 +464,18 @@ h1, h2, h3, h4 {
         width: 30%;
         text-align: center;
     }
-    .header__img {
-        width: 70%;
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
-        align-self: center;
-        justify-self: center;
-        top: -5rem;
-        right: -5rem;
-    }
-    .header__hexagonoH {
+    .header__elementos {
         display: none;
     }
 }
 
 @media (max-width: 480px) {
     .header__contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 90%;
-        margin: 0 auto;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        margin: 6.5rem auto;
     }
     .header__hexagonoV {
         display: none;
@@ -487,7 +484,6 @@ h1, h2, h3, h4 {
         justify-self: center;
         text-align: center;
         margin-top: 1rem;
-        grid-row: 2 / 3;
     }
     .header__parrafo {
         width: 100%;
@@ -496,11 +492,6 @@ h1, h2, h3, h4 {
         margin: 0 auto;
         width: 50%;
         margin-top: 2rem;
-    }
-    .header__img {
-        grid-row: 1 / 2;
-        top: 0;
-        right: 0;
     }
 }
 
