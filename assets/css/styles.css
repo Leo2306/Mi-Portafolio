@@ -139,8 +139,8 @@ h1, h2, h3, h4 {
     top: 2rem;
     right: 2.8rem;
     cursor: pointer;
-    color: var(--principal);
-    background-color: var(--negro);
+    color: var(--negro);
+    background-color: var(--principal);
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
@@ -409,7 +409,7 @@ h1, h2, h3, h4 {
         position: fixed;
         width: 60%;
         height: 100%;
-        background: linear-gradient(to right, var(--secundario) 60%, var(--principal) 100%);
+        background: linear-gradient(to right, var(--negroSecundario) 60%, var(--negro) 100%);
         top: 0;
         right: -100%;
         text-align: center;
@@ -419,7 +419,7 @@ h1, h2, h3, h4 {
     }
     .navegacion__enlace {
         text-transform: uppercase;
-        color: var(--negro);
+        color: var(--blanco);
         font-family: var(--fuenteTitulos);
     }
     .header__contenido {
