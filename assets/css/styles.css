@@ -275,7 +275,7 @@ h1, h2, h3, h4 {
 
 .section-about {
     background-color: var(--negroSecundario);
-    height: 100vh;
+    padding-bottom: 5rem;
 }
 
 .about__titulo {
@@ -293,10 +293,10 @@ h1, h2, h3, h4 {
 
 .about__img {
     width: 90%;
-    height: 75%;
+    border-radius: 3em 1em;
     margin: 0 auto;
-    border-radius: 50%;
     align-self: center;
+    background-color: var(--principal);
 }
 
 .about__texto {
@@ -354,6 +354,12 @@ h1, h2, h3, h4 {
         width: 30%;
         position: relative;
         top: -15rem;
+    }    
+    .about__titulo {
+        font-size: 2.4rem;
+    }    
+    .about__parrafo {
+        font-size: 1.6rem;
     }
 }
 
@@ -417,6 +423,7 @@ h1, h2, h3, h4 {
     }
     .header__texto {
         grid-column: 2 / 3;
+        width: 90%;
     }
     .header__titulo {
         margin-top: 1rem;
@@ -432,6 +439,16 @@ h1, h2, h3, h4 {
     .header__hexagonoH {
         grid-column: 3 / 4;
         width: 80%;
+    }
+    .about__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .about__img {
+        width: 30%;
     }
 }
 
