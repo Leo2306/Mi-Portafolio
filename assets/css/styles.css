@@ -55,7 +55,7 @@ h1, h2, h3, h4 {
 .header {
     background: linear-gradient(to right, var(--negro) 68%, var(--principal) 68%, var(--principal) 100%);
     min-height: 100vh;
-    z-index: 100;
+    position: relative;
 }
 
 /*----- NAVEGACION -----*/
@@ -271,13 +271,14 @@ h1, h2, h3, h4 {
     top: 10rem;
 }
 
-.wave {
+.header__wave {
     height: 150px; 
+    width: 100%;
     overflow: hidden;
-    position: relative;
-    top: 4rem;
+    position: absolute;
     stroke: none; 
     fill: var(--negroSecundario);
+    bottom: 0;
 }
 
 /* ------ ABOUT ------ */
@@ -364,9 +365,6 @@ h1, h2, h3, h4 {
         position: relative;
         top: -15rem;
     }    
-    .wave {
-        top: 12.5rem;
-    }
     .about__titulo {
         font-size: 2.4rem;
     }    
@@ -525,9 +523,6 @@ h1, h2, h3, h4 {
         margin: 0 auto;
         width: 50%;
         margin-top: 2rem;
-    }
-    .wave {
-        top: 4rem;
     }
 }
 
