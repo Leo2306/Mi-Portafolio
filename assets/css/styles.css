@@ -110,8 +110,8 @@ h1, h2, h3, h4 {
     top: 2rem;
     right: 2.8rem;
     cursor: pointer;
-    color: var(--principal);
-    background-color: var(--negro);
+    color: var(--negro);
+    background-color: var(--principal);
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
@@ -192,13 +192,14 @@ h1, h2, h3, h4 {
     transition: .5s;
 }
 
-.wave {
+.header__wave {
     height: 150px; 
+    width: 100%;
     overflow: hidden;
-    position: relative;
-    top: 4rem;
+    position: absolute;
     stroke: none; 
     fill: var(--negroSecundario);
+    bottom: 0;
 }
 
 /* ------ ABOUT ------ */
@@ -287,9 +288,6 @@ h1, h2, h3, h4 {
         position: relative;
         top: -15rem;
     }    
-    .wave {
-        top: 12.5rem;
-    }
     .about__titulo {
         font-size: 2.4rem;
     }    
@@ -334,7 +332,7 @@ h1, h2, h3, h4 {
         position: fixed;
         width: 60%;
         height: 100%;
-        background: linear-gradient(to right, var(--secundario) 60%, var(--principal) 100%);
+        background: linear-gradient(to right, var(--negroSecundario) 60%, var(--negro) 100%);
         top: 0;
         right: -100%;
         text-align: center;
@@ -344,7 +342,7 @@ h1, h2, h3, h4 {
     }
     .navegacion__enlace {
         text-transform: uppercase;
-        color: var(--negro);
+        color: var(--blanco);
         font-family: var(--fuenteTitulos);
     }
     .header__contenido {
@@ -448,9 +446,6 @@ h1, h2, h3, h4 {
         margin: 0 auto;
         width: 50%;
         margin-top: 2rem;
-    }
-    .wave {
-        top: 4rem;
     }
 }
 
