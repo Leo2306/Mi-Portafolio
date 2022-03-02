@@ -62,9 +62,17 @@ h1, h2, h3, h4 {
     align-items: center;
 }
 
+.contenedor-logo {
+    width: 42px;
+    height: 42px;
+}
+
 .navegacion__logo {
     display: flex;
     align-items: center;
+    max-width: 100%;
+    width: 100%;
+    height: 100%
 }
 
 .navegacion__menu {
@@ -75,33 +83,53 @@ h1, h2, h3, h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    padding: 0;
+    gap: 1.5rem;
     font-family: var(--fuenteTitulos);
 }
 
-.navegacion__enlace {
-    position: relative;
-    padding-bottom: 1rem;
+.navegacion__icono {
+    color: var(--principal);
+    margin-right: .5rem;
+}
+
+.navegacion__item {
     font-size: 1.6rem;
+    cursor:pointer;
+    position:relative;
+    padding: 1rem 1rem;
+    transition:all 1s;
 }
 
-.navegacion__enlace::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(to right, var(--principal), var(--secundario), var(--blanco));
-    z-index: 1;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s ease-in-out;
+.navegacion__item::after,
+.navegacion__item::before {
+    content:" ";
+    width: .1rem;;
+    height: .1rem;
+    position:absolute;
+    transition:all 1s;
 }
 
-.navegacion__enlace:hover::before {
-    transform: scaleX(1);
+.navegacion__item::after {
+    top:0;
+    left:0;
+    border-top:.2rem solid transparent;
+    border-left:.2rem solid transparent;
+}
+.navegacion__item::before {
+    bottom:0;
+    right:0;
+    border-bottom:.2rem solid transparent;
+    border-right:.2rem solid transparent;
+}
+.navegacion__item:hover {
+    border-top-right-radius:0;
+    border-bottom-left-radius:0;
+}
+.navegacion__item:hover::before,
+.navegacion__item:hover::after {
+    width:100%;
+    height:100%;
+    border-color: var(--principal);
 }
 
 .navegacion__close {
@@ -127,6 +155,56 @@ h1, h2, h3, h4 {
     border-radius: 50%;
 }
 
+/* ----- CONTACTO ----- */
+
+.contacto {
+    width: 4rem;
+    position: absolute;
+    bottom: 0;
+    left: 6.4rem;
+    right: auto;
+    z-index: 10;
+    font-size: 2.4rem;
+}
+
+.contacto__enlace {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: var(--gris);
+    position: relative;
+    transition: all .5s;
+}
+
+.contacto__enlace:hover {
+    color: var(--principal);
+    transform: translate(0,-.5rem)
+}
+
+.contacto__lista {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: .5s all;
+}
+
+.contacto__lista::after {
+    content: "";
+    background-color: var(--gris);
+    display: block;
+    width: .1rem;
+    height: 20rem;
+    margin: 0 auto;
+}
+
+.contacto__item {
+    margin: 1rem 0;
+}
+
 /* ----- HERO ----- */
 
 .hero {
@@ -143,12 +221,12 @@ h1, h2, h3, h4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 10rem 0;
+    margin: 7.5rem 0;
 }
 
 .hero__texto {
     margin: 0;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     color: var(--principal);
 }
 
@@ -250,9 +328,6 @@ h1, h2, h3, h4 {
 @media (max-width: 1200px) {
     .header {
         background: linear-gradient(to right, var(--negro) 70%, var(--principal) 70%, var(--principal) 100%);
-    }
-    .contenedor {
-        width: 95%;
     }
     .navegacion__texto {
         width: 3rem;
