@@ -47,16 +47,16 @@ h1, h2, h3, h4 {
 
 .header {
     width: 100%;
-    padding: 0 5rem;
     height: 100vh;
 }
 
-/*----- NAVEGACION -----*/
+/* ----- NAVEGACION ----- */
 
 .navegacion {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 5rem;
 }
 
 .navegacion__logo {
@@ -103,16 +103,19 @@ h1, h2, h3, h4 {
     border-top: .2rem solid transparent;
     border-left: .2rem solid transparent;
 }
+
 .navegacion__item::before {
     bottom: 0;
     right: 0;
     border-bottom: .2rem solid transparent;
     border-right: .2rem solid transparent;
 }
+
 .navegacion__item:hover {
     border-top-right-radius: 0;
     border-bottom-left-radius: 0;
 }
+
 .navegacion__item:hover::before,
 .navegacion__item:hover::after {
     width: 100%;
@@ -218,12 +221,12 @@ h1, h2, h3, h4 {
 
 .hero__nombre {
     margin: 0;
-    font-size: clamp(3rem, 7vw, 7.2rem);
+    font-size: clamp(4rem, 7vw, 7.2rem);
 }
 
 .hero__descripcion {
     margin: 0;
-    font-size: clamp(2rem, 6vw, 6rem);
+    font-size: clamp(4rem, 6vw, 6rem);
 }
 
 .hero__descripcion span {
@@ -235,7 +238,8 @@ h1, h2, h3, h4 {
     color: var(--gris);
 }
 
-.hero__boton {
+.hero__boton,
+.about__boton {
     font-size: 1.4rem;
     font-weight: bold;
     margin-top: 3rem;
@@ -253,7 +257,8 @@ h1, h2, h3, h4 {
     gap: .8rem;
 }
 
-.hero__boton:hover {
+.hero__boton:hover,
+.about__boton:hover {
     cursor: pointer;
     background-color: var(--principal);
     color: var(--negro);
@@ -306,26 +311,32 @@ h1, h2, h3, h4 {
     margin: 0;
 }
 
-.skills__descripcion {
-    display: inline-block;
+.about__boton {
+    font-size: 1.3rem;
+    padding: 1.25rem 1rem;
 }
 
 /* ------ MEDIA QUERIES ------ */
 
 @media (max-width: 1080px) {
-    .header {
+
+    .navegacion {
         padding: 0 2.5rem;
     }
+
     .hero {
         padding: 0 10rem;
     }
+
     .contacto {
         left: 2.8rem;
         right: auto;
     }
+
     .section-about {
         padding: 5rem 10rem;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -341,6 +352,7 @@ h1, h2, h3, h4 {
         margin-top: 4rem;
         padding: 0;
     }
+
     .navegacion__toggle {
         display: flex;
         justify-content: center;
@@ -348,6 +360,7 @@ h1, h2, h3, h4 {
         z-index: 100;
         border: 2px solid var(--principal);
     }
+
     .navegacion__menu {
         display: block;
         position: fixed;
@@ -361,42 +374,67 @@ h1, h2, h3, h4 {
         z-index: 100;
         background-color: var(--negroSecundario);
     }
+
     .contacto {
         display: none;
     }
+    
     .hero {
         padding: 0 5rem;
     }
+
+    .hero__contenido {
+        margin-top: 12.5rem;
+    }
+
     .section-about {
         padding: 5rem 5rem;
     }
+
     .about__info {
         display: block;
         width: 100%;
     }
+
     .about__img {
         display: block;
         min-width: 25rem;
         width: 40%;
         margin: 0 auto 5rem;
     }
+
+    .hero__boton {
+        margin-top: 3rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 0 2.5rem;
+    }
+
+    .hero__contenido {
+        margin-top: 10rem;
+    }
+
+    .hero__parrafo {
+        font-size: 1.6rem;
+    }
+
     .hero__boton {
         display: block;
         margin: 3rem auto;
     }
-}
 
-@media (max-width: 480px) {
-    .hero {
-        padding: 0 2.5rem;
-    }
-    .hero__parrafo {
-        font-size: 1.4rem;
-    }
     .section-about {
         padding: 5rem 2.5rem;
     }
+
 }
+
+/* ----- UTILIDADES ----- */
 
 .show {
     right: 0;
