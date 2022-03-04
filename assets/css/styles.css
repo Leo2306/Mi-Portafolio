@@ -266,23 +266,23 @@ h1, h2, h3, h4 {
 .about {
     max-width: 100rem;
     margin: 0 auto;
-    background-color: rgba(0,0,0,0.1);
-    box-shadow: 0px 0px 5px 5px var(--secundario);
-    padding: 2rem;
 }
 
 .about__titulo {
-    font-size: 4.4rem;
+    font-size: 3.8rem;
     text-transform: uppercase;
     text-align: center;
     padding: 1.5rem;
-    color: var(--principal);
+    color: var(--blanco);
+    position: relative;
 }
 
 .about__info {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    margin-bottom: 5rem;
+    background-color: rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 5px 5px var(--secundario);
+    padding: 5rem 0;
 }
 
 .about__img {
@@ -333,11 +333,11 @@ h1, h2, h3, h4 {
 }
 
 .skills__titulo {
-    font-size: 4.4rem;
+    font-size: 3.8rem;
     text-transform: uppercase;
     text-align: center;
     padding: 1.5rem;
-    color: var(--principal);
+    color: var(--blanco);
 }
 
 .skills__descripcion {
@@ -352,11 +352,11 @@ h1, h2, h3, h4 {
 .skills__set {
     padding: 2.4rem;
     border-radius: 1.6rem;
+    background-color: rgba(77, 181, 255, 0.1);   
 }
 
 .skills__set:hover {
-    background-color: rgba(77, 181, 255, 0.1);
-    transition: all .3s;
+    box-shadow: 0px 0px 10px var(--secundario);
 }
 
 .skills__set i {
@@ -372,19 +372,13 @@ h1, h2, h3, h4 {
     margin: 0 auto;
 }
 
-.skills__icon {
-    z-index: 10;
-}
-
-.skills__icon {
-    color: var(--blanco);
-}
-
 .skills__set h3 {
     font-size: 2.4rem;
     color: var(--principal);
     text-align: center;
-    margin: 3.5rem 0;
+    margin-top: 3.5rem;
+    height: 6rem;
+    width: 100%;
 }
 
 .skills__lista {
@@ -419,6 +413,18 @@ h1, h2, h3, h4 {
 
     .section-about {
         padding: 5rem 10rem;
+    }
+
+    .section-skills {
+        padding: 5rem 7rem;
+    }
+
+    .skills__descripcion {
+        padding: 1rem;
+    }
+
+    .skills__set {
+        padding: 2.4rem 2rem;
     }
 
 }
@@ -491,6 +497,10 @@ h1, h2, h3, h4 {
         margin-top: 3rem;
     }
 
+    .skills__descripcion {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -514,6 +524,10 @@ h1, h2, h3, h4 {
 
     .section-about {
         padding: 5rem 2.5rem;
+    }
+    
+    .section-skills {
+        padding: 5rem 3.5rem;
     }
 
 }
