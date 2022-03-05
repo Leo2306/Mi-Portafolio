@@ -393,6 +393,72 @@ h1, h2, h3, h4 {
 .skills__img {
     width: 2.5rem;
 }
+
+/* ------ FORMACIÓN ------ */
+
+.section-formacion {
+    padding: 5rem 15rem;
+}
+
+.formacion {
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.formacion__titulo {
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--blanco);
+    margin-bottom: 5rem;
+}
+
+.formacion__descripcion {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.formacion__set {
+    margin-left: 2rem;
+    padding: 0 0 3.5rem 3rem;
+    border-left: .1rem solid var(--blanco);
+    position: relative;
+}
+
+.formacion__set i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background: var(--negroSecundario);
+    color: var(--blanco);
+    position: absolute;
+    top: -1rem;
+    left: -2rem;
+}
+
+.formacion__set span {
+    font-size: 1.7rem;
+    color: var(--blanco);
+    border-radius: 5rem;
+    padding: .5rem 1.5rem;
+    background: var(--negroSecundario);
+}
+
+.formacion__set h3 {
+    font-size: 2rem;
+    color: var(--blanco);
+    padding-top: 3rem;
+}
+
+.formacion__set p {
+    font-size: 1.5rem;
+    color: var(--secundario);
+    line-height: 2;
+}
   
 /* ------ MEDIA QUERIES ------ */
 
@@ -425,6 +491,10 @@ h1, h2, h3, h4 {
 
     .skills__set {
         padding: 2.4rem 2rem;
+    }
+
+    .section-formacion {
+        padding: 5rem 10rem;
     }
 
 }
@@ -499,6 +569,10 @@ h1, h2, h3, h4 {
 
     .skills__descripcion {
         grid-template-columns: 1fr;
+    }
+
+    .section-formacion {
+        padding: 5rem 5rem;
     }
 
 }
