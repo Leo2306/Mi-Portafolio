@@ -19,3 +19,31 @@ if(menuClose) {
     content.classList.remove("blur");
     })
 }
+
+const proyecto = document.querySelector(".proyectos__descripcion"),
+      elemento = document.querySelectorAll(".elemento");
+
+for (let i = 0; i < elemento.length; i++) {
+    
+    elemento[i].addEventListener("click",function(){
+
+        console.log("ha apretado" + elemento[i].textContent)
+
+        let posicion = i ;
+        let operacion = i * (-100/3);
+
+        console.log(operacion);
+
+        proyecto.setAttribute(`style`,`transform: translateX(${operacion}%)`);
+
+        for (let i = 0; i < elemento.length; i++) {
+            
+            elemento[i].classList.remove(`activo`);
+            
+        } 
+
+        elemento[i].classList.add(`activo`);
+
+    })
+    
+}
