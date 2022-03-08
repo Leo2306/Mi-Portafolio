@@ -1,7 +1,7 @@
 const menuNavegacion = document.getElementById("navegacion-menu"),
       toggleNavegacion = document.getElementById("navegacion-toggle"),
       menuClose = document.getElementById("navegacion-close"),
-      content = document.getElementById("content");
+      content = document.getElementById("contenido");
 
 if(toggleNavegacion) {
     toggleNavegacion.addEventListener("click", function() {
@@ -21,29 +21,44 @@ if(menuClose) {
 }
 
 const proyecto = document.querySelector(".proyectos__descripcion"),
-      elemento = document.querySelectorAll(".elemento");
+      elemento = document.querySelectorAll(".proyectos__item");
 
 for (let i = 0; i < elemento.length; i++) {
     
     elemento[i].addEventListener("click",function(){
 
-        console.log("ha apretado" + elemento[i].textContent)
-
         let posicion = i ;
         let operacion = i * (-100/3);
-
-        console.log(operacion);
 
         proyecto.setAttribute(`style`,`transform: translateX(${operacion}%)`);
 
         for (let i = 0; i < elemento.length; i++) {
             
-            elemento[i].classList.remove(`activo`);
+            elemento[i].classList.remove("activo");
             
         } 
 
-        elemento[i].classList.add(`activo`);
+        elemento[i].classList.add("activo");
 
     })
     
 }
+
+const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});

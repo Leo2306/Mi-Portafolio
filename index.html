@@ -39,11 +39,6 @@
                     </li>
 
                     <li class="navegacion__item">
-                        <i class="fa-solid fa-gamepad navegacion__icono"></i>
-                        <a class="navegacion__enlace" href="#hobbies-&-skills">Hobbies</a>
-                    </li>    
-
-                    <li class="navegacion__item">
                         <i class="fa-solid fa-graduation-cap navegacion__icono"></i>
                         <a class="navegacion__enlace" href="#formacion">Formación</a>
                     </li>    
@@ -51,7 +46,14 @@
                     <li class="navegacion__item">
                         <i class="fa-solid fa-briefcase navegacion__icono"></i>
                         <a class="navegacion__enlace" href="#experiencia">Proyectos</a>
-                    </li>                 
+                    </li>
+
+                    <li class="navegacion__item">
+                        <i class="fa-solid fa-envelope navegacion__icono"></i>
+                        <a class="navegacion__enlace" href="#hobbies-&-skills">Contacto</a>
+                    </li>    
+                    
+                    
                 </ul>
                 
                 <div id="navegacion-close" class="navegacion__close">
@@ -66,32 +68,32 @@
 
         </div>
 
-        <div id="content">
+        <div id="contenido">
     
-            <div class="contacto">
-                <ul class="contacto__lista">
-                    <li class="contacto__item">
-                        <a class="contacto__enlace" href="">
+            <div class="redes">
+                <ul class="redes__lista">
+                    <li class="redes__item">
+                        <a class="redes__enlace" href="">
                             <i class="fa-brands fa-github"></i>
                         </a>
                     </li>
-                    <li class="contacto__item">
-                        <a class="contacto__enlace" href="">
+                    <li class="redes__item">
+                        <a class="redes__enlace" href="">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                     </li>
-                    <li class="contacto__item">
-                        <a class="contacto__enlace" href="">
+                    <li class="redes__item">
+                        <a class="redes__enlace" href="">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
                     </li>
-                    <li class="contacto__item">
-                        <a class="contacto__enlace" href="">
+                    <li class="redes__item">
+                        <a class="redes__enlace" href="">
                             <i class="fa-brands fa-twitter"></i>
                         </a>
                     </li>
-                    <li class="contacto__item">
-                        <a class="contacto__enlace" href="">
+                    <li class="redes__item">
+                        <a class="redes__enlace" href="">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                     </li>
@@ -212,7 +214,6 @@
 
         <div class="formacion">
 
-            
             <h2 class="formacion__titulo">
                 <i class="fa-solid fa-graduation-cap navegacion__icono"></i>
                 formación
@@ -247,9 +248,11 @@
                     <h3>Oracle Next Education</h3>
                     <p>Oracle - Alura Latam</p>
                 </div>
+
             </div>
             
         </div>
+
     </section>
 
     <section class="section-proyectos">
@@ -294,7 +297,7 @@
 
                     <div class="proyectos__contenido">
                         <h3>Reciclarte</h3>
-                        <p>Sitio web que ofrece información sobre reciclaje, ubicacion de puntos verdes y un registro para poder compartir conociminetos sobre el tema</p>
+                        <p>Sitio web que ofrece información sobre reciclaje, ubicacion de puntos verdes y un registro para poder compartir conocimientos sobre el tema</p>
                         <div class="enlaces">
                             <a class="proyectos__boton" target="_blank" href="https://github.com/Leo2306/g3-reciclar-tt">Repositorio</a>
                             <a class="proyectos__boton" target="_blank" href="https://proyecto-reciclar-tt.000webhostapp.com/index.html">Demo</a>
@@ -304,17 +307,103 @@
 
             </div>
 
-            <ul class="lista">
-                <li class="elemento activo"></li>
-                <li class="elemento"></li>
-                <li class="elemento"></li>
+            <ul class="proyectos__lista">
+                <li class="proyectos__item activo"></li>
+                <li class="proyectos__item"></li>
+                <li class="proyectos__item"></li>
             </ul>
 
         </div>
 
-        
-
     </section>
+
+    <section class="section-contacto">
+
+        <h2 class="contacto__titulo">
+            <i class="fa-solid fa-envelope navegacion__icono"></i>
+            Contacto
+        </h2>
+
+        <div class="contacto">
+
+            <div class="contacto__info">
+
+                <div class="contacto__set">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h4>Ubicacion</h4>
+                    <p>Córdoba, Argentina</p>
+                </div>
+
+                <div class="contacto__set">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>leonardonarvaja232@gmail.com</p>
+                </div>
+
+                <div class="contacto__set">
+                    <i class="fa-solid fa-phone"></i>
+                    <h4>Teléfono</h4>
+                    <p>123456789</p>
+                </div>
+
+            </div>
+
+            <div>
+                <form class="contacto__formulario" action="index.html" autocomplete="off">
+                <div class="contacto__campo">
+                    <input type="text" name="nombre" class="input">
+                    <label for="">Nombre</label>
+                </div>
+                <div class="contacto__campo">
+                    <input type="text" name="apellido" class="input">
+                    <label for="">Apellido</label>
+                </div>
+                <div class="contacto__campo">
+                    <input type="tel" name="telefono" class="input">
+                    <label for="">Email</label>
+                </div>
+                <div class="contacto__campo textarea">
+                    <textarea name="mensaje" class="input"></textarea>
+                    <label for="">Mensaje</label>
+                </div>
+                <input type="submit" value="Enviar" class="btn">
+                </form>
+          </div>
+        </div>    
+    </section>
+
+    <footer class="section-footer">
+            <div class="footer">
+                <p>&copy Leonardo Narvaja. Todos los derechos reservados</p>
+                <ul class="footer__lista">
+                    <li class="footer__item">
+                        <a class="footer__enlace" href="">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__enlace" href="">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__enlace" href="">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__enlace" href="">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__enlace" href="">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </footer>
 
     <script src="https://kit.fontawesome.com/b545c92e40.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
