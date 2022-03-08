@@ -755,6 +755,7 @@ textarea.input {
 .footer p {
     margin-bottom: 0;
     font-size: 1.6rem;
+    text-align: center;
 }
 
 .footer__lista {
@@ -849,6 +850,10 @@ textarea.input {
 
     .section-contacto {
         padding: 5rem 10rem;
+    }
+
+    .section-footer {
+        padding: 0rem 10rem;
     }
 
 }
@@ -953,6 +958,10 @@ textarea.input {
 
     .contacto {
         grid-template-columns: 1fr;
+    }
+
+    .section-footer {
+        padding: 0rem 5rem;
     }
 
 }
