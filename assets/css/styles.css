@@ -699,7 +699,6 @@ textarea.input {
     resize: none;
 }
 
-
 .contacto__campo label {
     position: absolute;
     top: 50%;
@@ -710,12 +709,12 @@ textarea.input {
     pointer-events: none;
     z-index: 1000;
     transition: 0.4s;
-  }
+}
   
-  .contacto__campo.textarea label {
+.contacto__campo.textarea label {
     top: 1rem;
     transform: translateY(0);
-  }
+}
 
   .contacto__campo.focus label {
     top: 0;
