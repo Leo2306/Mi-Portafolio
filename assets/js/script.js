@@ -62,3 +62,12 @@ inputs.forEach((input) => {
   input.addEventListener("focus", focusFunc);
   input.addEventListener("blur", blurFunc);
 });
+
+const enlaces = document.querySelectorAll(".navegacion__enlace");
+
+enlaces.forEach(enlace  => {
+  enlace.addEventListener("click", () => {
+    menuNavegacion.classList.remove("show");
+    content.classList.remove("blur");
+  })
+});
