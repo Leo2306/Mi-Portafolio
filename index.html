@@ -1,10 +1,10 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Mi Portafolio</title>
@@ -19,8 +19,8 @@
             <a href="index.html">
 
                 <svg class="navegacion__logo" width="50" height="50" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.866 58.2128L1.73205 32L16.866 5.78719H47.134L62.2679 32L47.134 58.2128H16.866Z" stroke="#4DB5FF" stroke-width="3"/>
-                    <path d="M18.7438 41V22.5625H22.0438V40.0125L20.5563 38.275H29.0313V41H18.7438ZM34.8345 41H31.6345V22.5625H36.797L43.5345 39.6625L43.047 39.8V22.5625H46.2595V41H41.022L34.3095 23.9375L34.8345 23.8125V41Z" fill="#4DB5FF"/>
+                    <path d="M16.866 58.2128L1.73205 32L16.866 5.78719H47.134L62.2679 32L47.134 58.2128H16.866Z" stroke="#EB4A4A" stroke-width="3"/>
+                    <path d="M18.7438 41V22.5625H22.0438V40.0125L20.5563 38.275H29.0313V41H18.7438ZM34.8345 41H31.6345V22.5625H36.797L43.5345 39.6625L43.047 39.8V22.5625H46.2595V41H41.022L34.3095 23.9375L34.8345 23.8125V41Z" fill="#EB4A4A"/>
                 </svg>
                                                           
             </a>                  
@@ -68,9 +68,11 @@
 
         </div>
 
-        <div id="contenido">
+        <div class="contenido" id="contenido">
     
             <div class="redes">
+
+                <p class="redes__titulo">mis redes</p>
 
                 <ul class="redes__lista">
 
@@ -126,36 +128,29 @@
 
     </header>
 
-    <section id="sobre-mi" class="section-about">
+    <section id="sobre-mi" class="contenedor-section">
 
         <div class="about">
 
-            <h2 class="about__titulo">Sobre Mí</h2>
+            <h2 class="about__titulo">Sobre <span>Mí</span></h2>
 
             <div class="about__descripcion">
 
                 <img class="about__img" src="assets/img/profile.png" alt="perfil-leonardo">
 
                 <div class="about__contenido">
-
-                    <div class="about__info">
-
-                        <div class="about__set">
-                            <i class="fa-solid fa-certificate"></i>
-                            <h3>Experiencia</h3>
-                            <p>6 meses de experiencia</p>
-                        </div>
-    
-                        <div class="about__set">
-                            <i class="fa-solid fa-folder"></i>
-                            <h3>Proyectos</h3>
-                            <p>4 proyectos realizados</p>
-                        </div>
-                        
-                    </div>
-
+                
                     <h3 class="about__subtitulo">Mi nombre es Leonardo Narvaja, soy desarrollador web y estudiante de ingeniería en sistemas</h3>
                     <p class="about__parrafo">Soy de Córdoba, Argentina. Me gusta todo lo relacionado a la programación, en especial la programacion web. Soy una persona creativa y me encanta trabajar en equipo, además aportar ideas y ayudar en las tareas diarias.</p>
+
+                    <ul class="about__lista">
+
+                        <li class="about__item"><i class="fa-regular fa-circle-check about__icono"></i>Trabajo en equipo</li>
+                        <li class="about__item"><i class="fa-regular fa-circle-check about__icono"></i>Resolucion de problemas</li>
+                        <li class="about__item"><i class="fa-regular fa-circle-check about__icono"></i>Buena comunicación</li>
+                        <li class="about__item"><i class="fa-regular fa-circle-check about__icono"></i>Ideas creativas</li>
+
+                    </ul>
 
                     <button class="about__boton">DESCARGAR CV<i class="fa-solid fa-download"></i></button>
 
@@ -167,76 +162,52 @@
 
     </section>
 
-    <section id="skills" class="section-skills">
+    <section id="skills" class="contenedor-section">
 
         <div class="skills">
 
-            <h2 class="skills__titulo">
-                <i class="fa-solid fa-screwdriver-wrench navegacion__icono"></i>
-                Skills
-            </h2>
+            <h2 class="skills__titulo">Skills</h2>
 
             <div class="skills__descripcion">
 
                 <div class="skills__set">
-
-                    <i class="fa-solid fa-desktop"></i>
-                    <h3>Desarrollo Frontend</h3>
-
-                    <div class="skills__lista">
-                        <h4>html</h4>
-                        <img class="skills__img" src="assets/img/html.svg" alt="html">
-                    </div>
-
-                    <div class="skills__lista">
-                        <h4>css</h4>
-                        <img class="skills__img" src="assets/img/css3.svg" alt="html">
-                    </div>
-
-                    <div class="skills__lista">
-                        <h4>javascript</h4>
-                        <img class="skills__img" src="assets/img/javascript.svg" alt="html">
-                    </div>
-
-                    <div class="skills__lista">
-                        <h4>bootstrap</h4>
-                        <img class="skills__img" src="assets/img/bootstrap.svg" alt="html">
-                    </div>
-
+                    <img src="assets/img/html.svg" alt="html">
+                    <h3 class="skills__texto">html</h3>
                 </div>
 
                 <div class="skills__set">
-
-                    <i class="fa-solid fa-gears"></i>
-                    <h3>Desarrollo Backend</h3>
-
-                    <div class="skills__lista">
-                        <h4>java</h4>
-                        <img class="skills__img" src="assets/img/java.svg" alt="html">
-                    </div>
-
-                    <div class="skills__lista">
-                        <h4>mysql</h4>
-                        <img class="skills__img" src="assets/img/mysql.svg" alt="html">
-                    </div>
-
+                    <img src="assets/img/css3.svg" alt="css">
+                    <h3 class="skills__texto">css</h3>
                 </div>
 
                 <div class="skills__set">
+                    <img src="assets/img/javascript.svg" alt="javascript">
+                    <h3 class="skills__texto">javascript</h3>
+                </div>
 
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-                    <h3>Herramientas</h3>
+                <div class="skills__set">
+                    <img src="assets/img/bootstrap.svg" alt="bootstrap">
+                    <h3 class="skills__texto">bootstrap</h3>
+                </div>
 
-                    <div class="skills__lista">
-                        <h4>git</h4>
-                        <img class="skills__img" src="assets/img/git.svg" alt="html">
-                    </div>
+                <div class="skills__set">
+                    <img src="assets/img/java.svg" alt="java">
+                    <h3 class="skills__texto">java</h3>
+                </div>
 
-                    <div class="skills__lista">
-                        <h4>github</h4>
-                        <img class="skills__img" src="assets/img/github.svg" alt="html">
-                    </div>
+                <div class="skills__set">
+                    <img src="assets/img/mysql.svg" alt="mysql">
+                    <h3 class="skills__texto">mysql</h3>
+                </div>
+                
+                <div class="skills__set">
+                    <img src="assets/img/git.svg" alt="git">
+                    <h3 class="skills__texto">git</h3>
+                </div>
 
+                <div class="skills__set">
+                    <img src="assets/img/github.svg" alt="github">
+                    <h3 class="skills__texto">github</h3>
                 </div>
 
             </div>
@@ -245,51 +216,68 @@
 
     </section>
 
-    <section id="formacion" class="section-formacion">
+    <section id="formacion" class="contenedor-section">
 
         <div class="formacion">
 
-            <h2 class="formacion__titulo">
-                <i class="fa-solid fa-graduation-cap navegacion__icono"></i>
-                formación
-            </h2>
+            <h2 class="formacion__titulo">Formación</h2>
 
             <div class="formacion__descripcion">
 
                 <div class="formacion__set">
 
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <span>2020-2023</span>
-                    <h3>Tecnicatura Superior En desarrollo Web y Aplicaciones Digitales</h3>
-                    <p>Instituto Superior Politécnico Córdoba</p>
+                    <div class="formacion__subtitulo">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h3>Tecnicatura Superior En desarrollo Web y Aplicaciones Digitales</h3>
+                    </div>
 
+                    <div class="formacion__contenido">
+                        <p><i class="fa-solid fa-school"></i>Instituto Superior Politécnico Córdoba (ISPC)</p>
+                        <span><i class="fa-solid fa-calendar"></i>2021 - 2023</span>
+                    </div>
+                    
                 </div>
 
                 <div class="formacion__set">
 
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <span>2022-2026</span>
-                    <h3>Ingeniería en Sistemas de Información</h3>
-                    <p>Universidad Tecnológica Nacional / Factultad regional de Córdoba</p>
+                    <div class="formacion__subtitulo">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h3>Diplomatura en introducción a la programación con Java</h3>
+                    </div>
 
+                    <div class="formacion__contenido">
+                        <p><i class="fa-solid fa-school"></i>Ministerio de Ciencia y Tecnología - Universidad Tecnológica Nacional / Facultad regional de Villa María</p>
+                        <span><i class="fa-solid fa-calendar"></i>2021 - 2022</span>
+                    </div>
+                    
                 </div>
 
                 <div class="formacion__set">
 
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <span>2021-2022</span>
-                    <h3>Diplomatura en introducción a la programación con Java</h3>
-                    <p>Ministerio de Ciencia y Tecnología - Universidad Tecnológica Nacional / Facultad regional de Villa María</p>
+                    <div class="formacion__subtitulo">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h3>Oracle Next Education</h3>
+                    </div>
 
+                    <div class="formacion__contenido">
+                        <p><i class="fa-solid fa-school"></i>Oracle - Alura Latam</p>
+                        <span><i class="fa-solid fa-calendar"></i>2021 - 2022</span>
+                    </div>
+                    
                 </div>
 
                 <div class="formacion__set">
 
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <span>2021-2022</span>
-                    <h3>Oracle Next Education</h3>
-                    <p>Oracle - Alura Latam</p>
+                    <div class="formacion__subtitulo">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h3>Ingeniería en Sistemas de Información</h3>
+                    </div>
 
+                    <div class="formacion__contenido">
+                        <p><i class="fa-solid fa-school"></i>Universidad Tecnológica Nacional (UTN) / Factultad regional de Córdoba (FRC)</p>
+                        <span><i class="fa-solid fa-calendar"></i>2022 - 2027</span>
+                    </div>
+                    
                 </div>
 
             </div>
@@ -298,120 +286,138 @@
 
     </section>
 
-    <section id="proyectos" class="section-proyectos">
+    <section id="proyectos" class="contenedor-section">
 
-        <h2 class="proyectos__titulo">
-            <i class="fa-solid fa-briefcase navegacion__icono"></i>
-            proyectos
-        </h2>
+        <h2 class="proyectos__titulo">Proyectos</h2>
 
         <div class="proyectos">
+            
+            <div class="proyectos__set">
 
-            <div class="proyectos__descripcion">
+                <div class="proyectos__contenido">
 
-                <div class="proyectos__set">
+                    <h3>Encriptador</h3>
+                    <p>Aplicacion web para guardar un mensaje secreto o bien descifrarlo</p>
 
-                    <img class="proyectos__img" src="assets/img/encriptador-one.png" alt="encriptador">
-
-                    <div class="proyectos__contenido">
-
-                        <h3>Encriptador de texto</h3>
-                        <p>Aplicacion web que permite guardar un mensaje secreto o bien descifrar un mensaje bajo ciertas reglas establceidas</p>
-
-                        <div class="proyectos__enlaces">
-                            <a class="proyectos__boton" target="_blank" href="https://github.com/Leo2306/Challenge-Oracle-Encriptador">Repositorio</a>
-                            <a class="proyectos__boton" target="_blank" href="https://leo2306.github.io/Challenge-Oracle-Encriptador/">Demo</a>
-                        </div>
-
+                    <div class="proyectos__enlaces">
+                        <a class="proyectos__boton" target="_blank" href="https://github.com/Leo2306/Challenge-Oracle-Encriptador">Repositorio</a>
+                        <a class="proyectos__boton" target="_blank" href="https://leo2306.github.io/Challenge-Oracle-Encriptador/">Demo</a>
                     </div>
 
                 </div>
 
-                <div class="proyectos__set">
-
-                    <img class="proyectos__img" src="assets/img/ahorcado-one.png" alt="encriptador">
-
-                    <div class="proyectos__contenido">
-
-                        <h3>Ahorcado</h3>
-                        <p>Tradicional juego del ahorcado donde deberás ingresar letras hasta completar la palabra secreta o el ahorcado, lo que ocurra primero</p>
-
-                        <div class="proyectos__enlaces">
-                            <a class="proyectos__boton" target="_blank" href="https://github.com/Leo2306/Challenge-Oracle-Ahorcado">Repositorio</a>
-                            <a class="proyectos__boton" target="_blank" href="https://leo2306.github.io/Challenge-Oracle-Ahorcado/">Demo</a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="proyectos__set">
-
-                    <img class="proyectos__img" src="assets/img/reciclar-tt-ispc.png" alt="encriptador">
-
-                    <div class="proyectos__contenido">
-
-                        <h3>Reciclarte</h3>
-                        <p>Sitio web que ofrece información sobre reciclaje, ubicacion de puntos verdes y un registro para poder compartir conocimientos sobre el tema</p>
-
-                        <div class="proyectos__enlaces">
-                            <a class="proyectos__boton" target="_blank" href="https://github.com/Leo2306/g3-reciclar-tt">Repositorio</a>
-                            <a class="proyectos__boton" target="_blank" href="https://proyecto-reciclar-tt.000webhostapp.com/index.html">Demo</a>
-                        </div>
-
-                    </div>
-
-                </div>
+                <img class="proyectos__img" src="assets/img/encriptador-one.png" alt="encriptador">
 
             </div>
 
-            <ul class="proyectos__lista">
+            <div class="proyectos__set">
 
-                <li class="proyectos__item activo"></li>
-                <li class="proyectos__item"></li>
-                <li class="proyectos__item"></li>
+                <div class="proyectos__contenido">
 
-            </ul>
+                    <h3>Ahorcado</h3>
+                    <p>Juego del ahorcado para ingresar letras hasta completar la palabra</p>
 
+                    <div class="proyectos__enlaces">
+                        <a class="proyectos__boton" target="_blank" href="https://github.com/Leo2306/Challenge-Oracle-Ahorcado">Repositorio</a>
+                        <a class="proyectos__boton" target="_blank" href="https://leo2306.github.io/Challenge-Oracle-Ahorcado/">Demo</a>
+                    </div>
+
+                </div>
+
+                <img class="proyectos__img" src="assets/img/ahorcado-one.png" alt="encriptador">
+
+            </div>
+
+            <div class="proyectos__set">
+
+                <div class="proyectos__contenido">
+
+                    <h3>Reciclarte</h3>
+                    <p>Sitio web que ofrece información sobre reciclaje y puntos verdes</p>
+
+                    <div class="proyectos__enlaces">
+                        <a class="proyectos__boton" target="_blank" href="https://github.com/Leo2306/g3-reciclar-tt">Repositorio</a>
+                        <a class="proyectos__boton" target="_blank" href="https://proyecto-reciclar-tt.000webhostapp.com/index.html">Demo</a>
+                    </div>
+
+                </div>
+
+                <img class="proyectos__img" src="assets/img/reciclar-tt-ispc.png" alt="encriptador">
+
+            </div>
+               
         </div>
 
     </section>
 
-    <section id="contacto" class="section-contacto">
+    <section id="contacto" class="contenedor-section">
 
-        <h2 class="contacto__titulo">
-            <i class="fa-solid fa-envelope navegacion__icono"></i>
-            Contacto
-        </h2>
+        <h2 class="contacto__titulo">Contacto</h2>
 
         <div class="contacto">
 
             <div class="contacto__info">
 
+                <h3 class="contacto__info-titulo">Leonardo Narvaja</h3>
+                <p class="contacto__info-texto">Desarrollador web - Estudiante de ingeniería en sistemas</p>
+
                 <div class="contacto__set">
                     <i class="fa-solid fa-location-dot"></i>
-                    <h4>Ubicacion</h4>
                     <p>Córdoba, Argentina</p>
                 </div>
 
                 <div class="contacto__set">
                     <i class="fa-solid fa-envelope"></i>
-                    <h4>Email</h4>
                     <p>leo123@gmail.com</p>
                 </div>
 
                 <div class="contacto__set">
                     <i class="fa-solid fa-phone"></i>
-                    <h4>Teléfono</h4>
                     <p>123456789</p>
+                </div>
+
+                <div class="contacto-redes">
+    
+                    <ul class="contacto-redes__lista">
+    
+                        <li class="contacto-redes__item">
+                            <a class="contacto-redes__enlace" href="">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </li>
+    
+                        <li class="contacto-redes__item">
+                            <a class="contacto-redes__enlace" href="">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+    
+                        <li class="contacto-redes__item">
+                            <a class="contacto-redes__enlace" href="">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+    
+                        <li class="contacto-redes__item">
+                            <a class="contacto-redes__enlace" href="">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+    
+                        <li class="contacto-redes__item">
+                            <a class="contacto-redes__enlace" href="">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+    
+                    </ul>
+    
                 </div>
 
             </div>
 
             <form class="contacto__formulario" action="index.html" autocomplete="off">
-                
-                <legend>dejame tu mensaje</legend>
-
+            
                 <div class="contacto__campo">
                     <input type="text" name="nombre" class="input">
                     <label for="">Nombre</label>
@@ -432,7 +438,7 @@
                     <label for="">Mensaje</label>
                 </div>
 
-                <input type="submit" value="Enviar" class="btn">
+                <input type="submit" value="Enviar" class="contacto__boton">
 
             </form>   
 
@@ -440,46 +446,12 @@
 
     </section>
 
-    <footer class="section-footer">
+    <footer class="contenedor-section">
 
         <div class="footer">
 
-            <p>&copy Leonardo Narvaja. Todos los derechos reservados</p>
-            
-            <ul class="footer__lista">
-
-                <li class="footer__item">
-                    <a class="footer__enlace" href="">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                </li>
-
-                <li class="footer__item">
-                    <a class="footer__enlace" href="">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                </li>
-
-                <li class="footer__item">
-                    <a class="footer__enlace" href="">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                </li>
-
-                <li class="footer__item">
-                    <a class="footer__enlace" href="">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                </li>
-
-                <li class="footer__item">
-                    <a class="footer__enlace" href="">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </li>
-
-            </ul>
-            
+            <p class="footer__texto">&copy <span>Leonardo Narvaja</span> 2022. Todos los derechos reservados</p>
+    
         </div>
            
     </footer>
