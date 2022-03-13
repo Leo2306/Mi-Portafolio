@@ -32,7 +32,7 @@ body {
 /*----------- GLOBAL -----------*/
 
 section[id] {
-    scroll-margin-top: 1rem;
+    scroll-margin-top: 10rem;
 }
 
 #sobre-mi,
@@ -54,8 +54,15 @@ h1, h2, h3, h4 {
     font-family: var(--fuentePrincipal);
 }
 
-.contenedor-section {
+.contenedor-seccion {
     padding: 0 10rem;
+}
+
+.seccion-titulo {
+    text-align: center;
+    font-size: 4vw;
+    color: var(--blanco);
+    text-transform: uppercase;
 }
 
 /* ----------- HEADER ----------- */
@@ -270,14 +277,6 @@ h1, h2, h3, h4 {
     margin: 0 auto;
 }
 
-.about__titulo {
-    text-align: center;
-    font-size: 4vw;
-    color: var(--blanco);
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-}
-
 .about__descripcion {
     display: grid;
     grid-template-columns: 2fr 3fr;
@@ -382,19 +381,12 @@ h1, h2, h3, h4 {
     margin: 0 auto;
 }
 
-.skills__titulo {
-    text-align: center;
-    font-size: 4vw;
-    color: var(--blanco);
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-}
-
 .skills__descripcion {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 1.5rem;
     width: 100%;
+    padding: 3rem 0;
 }
 
 .skills__set {
@@ -432,19 +424,12 @@ h1, h2, h3, h4 {
     margin: 0 auto;
 }
 
-.formacion__titulo {
-    text-align: center;
-    font-size: 4vw;
-    color: var(--blanco);
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-}
-
 .formacion__descripcion {
     display: grid;
     grid-template-columns: repeat(2 , 1fr);
     column-gap: 5rem;
     position: relative;
+    padding: 3rem 0;
 }
 
 .formacion__set {
@@ -506,14 +491,7 @@ h1, h2, h3, h4 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-}
-
-.proyectos__titulo {
-    text-align: center;
-    font-size: 4vw;
-    color: var(--blanco);
-    margin-bottom: 3rem;
-    text-transform: uppercase;
+    padding: 3rem 0;
 }
 
 .proyectos__set {
@@ -569,24 +547,17 @@ h1, h2, h3, h4 {
 
 /* ------ CONTACTO ------ */
 
-.contacto__titulo {
-    text-align: center;
-    font-size: 4vw;
-    color: var(--blanco);
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-}
-
 .contacto {
     max-width: 100rem;
     display: grid;
     grid-template-columns: 2fr 3fr;
     margin: 0 auto;
+    padding: 3rem 0;
 }
 
 .contacto__formulario,
 .contacto__info {
-    padding: 2.3rem 2.2rem;
+    padding: 0 2.2rem 2.3rem;
 }
 
 .contacto__info h3 {
@@ -710,6 +681,11 @@ textarea.input {
 /* ------ FOOTER ------ */
 
 .footer {
+    background-color: var(--fondoSecundario);
+    margin: 0;
+}
+
+.footer__contenido {
     color: var(--blanco);
 }
 
