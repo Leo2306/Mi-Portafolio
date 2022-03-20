@@ -7,6 +7,13 @@
     --blanco: #FFFFFF;
     --gris: #808DAD;
 
+    /* --- OTROSCOLORES --- */
+    --current: #EB4A4A;
+    --ruby: #29D882;
+    --lightGreen: #64ffda;
+    --violet: #AD00FF;
+    --blue: #4542FF;
+
     /*--- FUENTES ---*/
     --fuentePrincipal: 'Quicksand', sans-serif;
     --fuenteSecundaria: 'Dosis', sans-serif;
@@ -112,6 +119,15 @@ h1, h2, h3, h4 {
     align-items: center;
 }
 
+.navegacion__logo .path-1 {
+    stroke: var(--principal);
+    stroke-width: 3;
+}
+
+.navegacion__logo .path-2 {
+    fill: var(--principal);
+}
+
 .navegacion__menu {
     position: relative;
 }
@@ -176,6 +192,66 @@ h1, h2, h3, h4 {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
+}
+
+/* ----- COLORES ----- */
+
+.colores {
+    position: fixed;
+    top: 15%;
+    left: -4rem;
+    transition: .5s ease-in-out;
+}
+
+.colores.open {
+    left: 0;
+}
+
+.colores__contenido {
+    position: absolute;
+    background-color: var(--blanco);
+    padding: .5rem 1rem;
+    border-radius: 0 .5rem .5rem 0;
+    cursor: pointer;
+    left: 4rem;
+}
+
+.colores__contenido .colores__icono {
+    color: var(--fondo);
+}
+
+.colores__lista {
+    margin: 0;
+    position: absolute;
+    background-color: var(--blanco);
+    border-radius: 0 0 .5rem;
+}
+
+.colores__lista .colores__item {
+    padding: 1.5rem;
+    border-radius: 50%;
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.colores__item:nth-child(1) {
+    background-color: var(--current);
+}
+
+.colores__item:nth-child(2) {
+    background-color: var(--ruby);
+}
+
+.colores__item:nth-child(3) {
+    background-color: var(--lightGreen);
+}
+
+.colores__item:nth-child(4) {
+    background-color: var(--violet);
+}
+
+.colores__item:nth-child(5) {
+    background-color: var(--blue);
 }
 
 /* ----- REDES ----- */

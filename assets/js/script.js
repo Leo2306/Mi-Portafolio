@@ -185,3 +185,23 @@ formulario.addEventListener("submit", (event) => {
     }
     
 })
+
+const colores = document.querySelector(".colores");
+const contenidoColores = document.querySelector(".colores__contenido");
+const colorIcono = document.querySelector(".colores__icono");
+
+contenidoColores.addEventListener("click", () => {
+    colores.classList.toggle("open");
+});
+
+const cambio = document.querySelectorAll(".colores__item");
+document.querySelector(":root").style.setProperty("--principal", "#EB4A4A");
+
+cambio.forEach(color => {
+    color.addEventListener("click", () => {
+        const colorActual = color.dataset.id;
+        console.log(colorActual);
+        document.querySelector(":root").style.setProperty("--principal", colorActual);
+    })
+    
+})
