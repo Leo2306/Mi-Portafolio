@@ -54,6 +54,7 @@ const validaciones = {
   nombre: /^[a-zA-ZÁ-ÿ\s]+$/,
   apellido: /^[a-zA-ZÁ-ÿ\s]+$/,
   email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z\s0-9-]+\.[a-zA-Z\s0-9-.]+/,
+  espacios: /^\s*$/,
   mensaje: /(.)/
 }
 
@@ -92,7 +93,7 @@ inputs.forEach(input => {
 })
 
 const validarCampos = (expresion, input, campo) => {
-  if(input.value == "") {
+  if(input.value == "" || (validaciones.espacios).test(input.value)) {
 
     document.querySelector(`.campo-${campo} .formulario__estado-${campo}`).classList.remove("fa-circle-xmark");
     document.querySelector(`.campo-${campo} .formulario__estado-${campo}`).classList.remove("fa-circle-check");
@@ -136,7 +137,7 @@ formulario.addEventListener("submit", (event) => {
 
   } else {
     inputs.forEach(input => {
-      if(input.value == "") {
+      if(input.value == "" || (validaciones.espacios).test(input.value)) {
         document.querySelector(`.formulario__vacio-${input.name}`).classList.add("activo");
         setTimeout(() => {document.querySelector(`.formulario__vacio-${input.name}`).classList.remove("activo")},2500);
       } else {

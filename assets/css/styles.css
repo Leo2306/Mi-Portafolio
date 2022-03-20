@@ -107,8 +107,7 @@ h1, h2, h3, h4 {
     top: 0;
     width: 100%;
     z-index: 100;
-    font-family: var(--fuenteSecundaria);
-    letter-spacing: .2rem;
+    font-family: var(--fuentePrincipal);
 }
 
 .navegacion__logo {
@@ -620,7 +619,7 @@ h1, h2, h3, h4 {
     width: 100%;
     outline: none;
     background: rgba(128, 141, 173, 0.1);
-    padding: 2rem 1.6rem;
+    padding: 2rem 4rem 2rem 1.6rem;
     color: var(--blanco);
     border: .1rem solid var(--fondoSecundario);
     border-radius: 1rem;
@@ -628,8 +627,19 @@ h1, h2, h3, h4 {
     font-size: 1.4rem;
 }
 
+.formulario__input::placeholder {
+    opacity: 0;
+    color: var(--gris);
+    transition: .4s;
+}
+
+.formulario__input:focus::placeholder {
+    opacity: 1;
+    transition: .6s;
+}
+
 .formulario__textarea-input {
-    padding: 1.5rem 1.6rem;
+    padding: 1.5rem 4rem 1.5rem 1.6rem;
     min-height: 150px;
     border-radius: .5rem;
     resize: none;

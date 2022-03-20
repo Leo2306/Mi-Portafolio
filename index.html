@@ -413,10 +413,10 @@
 
             </div>
 
-            <form class="contacto__formulario" action="index.html" autocomplete="off">
+            <form class="contacto__formulario" action="index.html" autocomplete="off" novalidate>
             
                 <div class="formulario__campo campo-nombre">
-                    <input type="text" name="nombre" class="formulario__input">
+                    <input type="text" name="nombre" class="formulario__input" placeholder="Ej: Carlos">
                     <label class="formulario__label" for="">Nombre</label>
                     <i class="formulario__estado formulario__estado-nombre fa-solid"></i>
                     <span class="formulario__input-error formulario__nombre">*Ingrese solo letras en el nombre</span>
@@ -424,7 +424,7 @@
                 </div>
 
                 <div class="formulario__campo campo-apellido">
-                    <input type="text" name="apellido" class="formulario__input">
+                    <input type="text" name="apellido" class="formulario__input" placeholder="Ej: Fernandez">
                     <label class="formulario__label" for="">Apellido</label>
                     <i class="formulario__estado formulario__estado-apellido fa-solid"></i>
                     <span class="formulario__input-error formulario__apellido">*Ingrese solo letras en el apellido</span>
@@ -432,10 +432,10 @@
                 </div>
 
                 <div class="formulario__campo campo-email">
-                    <input type="email" name="email" class="formulario__input">
+                    <input type="email" name="email" class="formulario__input" placeholder="Ej: alguien@correo.com">
                     <label class="formulario__label" for="">Email</label>
                     <i class="formulario__estado formulario__estado-email fa-solid"></i>
-                    <span class="formulario__input-error formulario__email">*Ingrese un email valido</span>
+                    <span class="formulario__input-error formulario__email">*Por favor, respeta el formato de email</span>
                     <span class="formulario__vacio formulario__vacio-email">*Debes completar este campo</span>
                 </div>
 
