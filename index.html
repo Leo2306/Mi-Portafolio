@@ -30,27 +30,22 @@
                 <ul class="navegacion__lista">
 
                     <li class="navegacion__item">
-                        <i class="fa-solid fa-user navegacion__icono"></i>
                         <a class="navegacion__enlace" href="#sobre-mi">Sobre Mí</a>
                     </li>
 
                     <li class="navegacion__item">
-                        <i class="fa-solid fa-screwdriver-wrench navegacion__icono"></i>
                         <a class="navegacion__enlace" href="#skills">Skills</a>
                     </li>
 
                     <li class="navegacion__item">
-                        <i class="fa-solid fa-graduation-cap navegacion__icono"></i>
                         <a class="navegacion__enlace" href="#formacion">Formación</a>
                     </li>    
 
                     <li class="navegacion__item">
-                        <i class="fa-solid fa-briefcase navegacion__icono"></i>
                         <a class="navegacion__enlace" href="#proyectos">Proyectos</a>
                     </li>
 
                     <li class="navegacion__item">
-                        <i class="fa-solid fa-envelope navegacion__icono"></i>
                         <a class="navegacion__enlace" href="#contacto">Contacto</a>
                     </li>    
                   
@@ -119,10 +114,12 @@
 
                     <p class="hero__parrafo">Formado en tecnologías web, busco aprender todos los días y desarrollar nuevas habilidades</p>
 
-                    <button class="hero__boton">continuar<i class="fa-solid fa-arrow-turn-down"></i></button>
+                    <button class="btn hero__btn">Contactame<i class="fa-solid fa-user"></i></button>
                 </div>
             
             </section>
+
+            <a class="scroll" href="#sobre-mi">Scroll<i class="fa-solid fa-arrow-down"></i></a>
 
         </div>
 
@@ -152,7 +149,7 @@
 
                     </ul>
 
-                    <button class="about__boton">DESCARGAR CV<i class="fa-solid fa-download"></i></button>
+                    <button class="btn">Descargar CV<i class="fa-solid fa-download"></i></button>
 
                 </div>
 
@@ -300,8 +297,8 @@
                     <p>Aplicacion web para guardar un mensaje secreto o bien descifrarlo</p>
 
                     <div class="proyectos__enlaces">
-                        <a class="proyectos__boton" target="_blank" href="https://github.com/Leo2306/Challenge-Oracle-Encriptador">Repositorio</a>
-                        <a class="proyectos__boton" target="_blank" href="https://leo2306.github.io/Challenge-Oracle-Encriptador/">Demo</a>
+                        <a class="btn" target="_blank" href="https://github.com/Leo2306/Challenge-Oracle-Encriptador">Repositorio</a>
+                        <a class="btn" target="_blank" href="https://leo2306.github.io/Challenge-Oracle-Encriptador/">Demo</a>
                     </div>
 
                 </div>
@@ -318,8 +315,8 @@
                     <p>Juego del ahorcado para ingresar letras hasta completar la palabra</p>
 
                     <div class="proyectos__enlaces">
-                        <a class="proyectos__boton" target="_blank" href="https://github.com/Leo2306/Challenge-Oracle-Ahorcado">Repositorio</a>
-                        <a class="proyectos__boton" target="_blank" href="https://leo2306.github.io/Challenge-Oracle-Ahorcado/">Demo</a>
+                        <a class="btn" target="_blank" href="https://github.com/Leo2306/Challenge-Oracle-Ahorcado">Repositorio</a>
+                        <a class="btn" target="_blank" href="https://leo2306.github.io/Challenge-Oracle-Ahorcado/">Demo</a>
                     </div>
 
                 </div>
@@ -336,8 +333,8 @@
                     <p>Sitio web que ofrece información sobre reciclaje y puntos verdes</p>
 
                     <div class="proyectos__enlaces">
-                        <a class="proyectos__boton" target="_blank" href="https://github.com/Leo2306/g3-reciclar-tt">Repositorio</a>
-                        <a class="proyectos__boton" target="_blank" href="https://proyecto-reciclar-tt.000webhostapp.com/index.html">Demo</a>
+                        <a class="btn" target="_blank" href="https://github.com/Leo2306/g3-reciclar-tt">Repositorio</a>
+                        <a class="btn" target="_blank" href="https://proyecto-reciclar-tt.000webhostapp.com/index.html">Demo</a>
                     </div>
 
                 </div>
@@ -418,28 +415,42 @@
 
             <form class="contacto__formulario" action="index.html" autocomplete="off">
             
-                <div class="contacto__campo">
-                    <input type="text" name="nombre" class="input">
-                    <label for="">Nombre</label>
+                <div class="formulario__campo campo-nombre">
+                    <input type="text" name="nombre" class="formulario__input">
+                    <label class="formulario__label" for="">Nombre</label>
+                    <i class="formulario__estado formulario__estado-nombre fa-solid"></i>
+                    <span class="formulario__input-error formulario__nombre">*Ingrese solo letras en el nombre</span>
+                    <span class="formulario__vacio formulario__vacio-nombre">*Debes completar este campo</span>
                 </div>
 
-                <div class="contacto__campo">
-                    <input type="text" name="apellido" class="input">
-                    <label for="">Apellido</label>
+                <div class="formulario__campo campo-apellido">
+                    <input type="text" name="apellido" class="formulario__input">
+                    <label class="formulario__label" for="">Apellido</label>
+                    <i class="formulario__estado formulario__estado-apellido fa-solid"></i>
+                    <span class="formulario__input-error formulario__apellido">*Ingrese solo letras en el apellido</span>
+                    <span class="formulario__vacio formulario__vacio-apellido">*Debes completar este campo</span>
                 </div>
 
-                <div class="contacto__campo">
-                    <input type="tel" name="telefono" class="input">
-                    <label for="">Email</label>
+                <div class="formulario__campo campo-email">
+                    <input type="email" name="email" class="formulario__input">
+                    <label class="formulario__label" for="">Email</label>
+                    <i class="formulario__estado formulario__estado-email fa-solid"></i>
+                    <span class="formulario__input-error formulario__email">*Ingrese un email valido</span>
+                    <span class="formulario__vacio formulario__vacio-email">*Debes completar este campo</span>
                 </div>
 
-                <div class="contacto__campo textarea">
-                    <textarea name="mensaje" class="input"></textarea>
-                    <label for="">Mensaje</label>
+                <div class="formulario__campo campo-mensaje">
+                    <textarea name="mensaje" class="formulario__input formulario__textarea-input"></textarea>
+                    <label class="formulario__label formulario__textarea-label" for="">Mensaje</label>
+                    <i class="formulario__estado formulario__estado-mensaje fa-solid"></i>
+                    <span class="formulario__input-error formulario__mensaje">*Ingresa un mensaje</span>
+                    <span class="formulario__vacio formulario__vacio-mensaje">*Debes completar este campo</span>
                 </div>
 
-                <input type="submit" value="Enviar" class="contacto__boton">
-
+                <div class="formulario__set">
+                    <button type="submit" class="btn formulario__btn">Enviar</button>
+                    <span class="formulario__estado-valido">*Formulario enviado con éxito</span>
+                </div>
             </form>   
 
         </div>    
