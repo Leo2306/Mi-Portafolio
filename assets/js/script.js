@@ -1,149 +1,187 @@
 const menuNavegacion = document.getElementById("navegacion-menu"),
       toggleNavegacion = document.getElementById("navegacion-toggle"),
       menuClose = document.getElementById("navegacion-close"),
-      content = document.getElementById("contenido");
+      contenido = document.querySelector(".main");
 
 if(toggleNavegacion) {
+
     toggleNavegacion.addEventListener("click", function() {
         menuNavegacion.classList.add("show");
         menuClose.classList.add("show-close");
         toggleNavegacion.setAttribute("style","z-index: 0");
-        content.classList.add("blur");
+        contenido.classList.add("blur");
+
     })
 }
 
 if(menuClose) {
+
     menuClose.addEventListener("click", function() {
     menuNavegacion.classList.remove("show");
     menuClose.classList.remove("show-close");
-    content.classList.remove("blur");
+    contenido.classList.remove("blur");
+
     })
 }
 
 const inputs = document.querySelectorAll(".formulario__input");
 
 function focusFunc() {
-  let parent = this.parentNode;
-  parent.classList.add("focus");
+
+    let parent = this.parentNode;
+    parent.classList.add("focus");
+
 }
 
 function blurFunc() {
+
   let parent = this.parentNode;
+
   if (this.value == "") {
     parent.classList.remove("focus");
+
   }
 }
 
 inputs.forEach((input) => {
-  input.addEventListener("focus", focusFunc);
-  input.addEventListener("blur", blurFunc);
+
+    input.addEventListener("focus", focusFunc);
+    input.addEventListener("blur", blurFunc);
+
 });
 
 const enlaces = document.querySelectorAll(".navegacion__enlace");
 
 enlaces.forEach(enlace => {
-  enlace.addEventListener("click", () => {
-    menuNavegacion.classList.remove("show");
-    content.classList.remove("blur");
-  })
+
+    enlace.addEventListener("click", () => {
+        menuNavegacion.classList.remove("show");
+        content.classList.remove("blur");
+
+    })
 });
 
 const formulario = document.querySelector(".contacto__formulario")
 
 const validaciones = {
-  nombre: /^[a-zA-ZÁ-ÿ\s]+$/,
-  apellido: /^[a-zA-ZÁ-ÿ\s]+$/,
-  email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z\s0-9-]+\.[a-zA-Z\s0-9-.]+/,
-  espacios: /^\s*$/,
-  mensaje: /(.)/
+
+    nombre: /^[a-zA-ZÁ-ÿ\s]+$/,
+    apellido: /^[a-zA-ZÁ-ÿ\s]+$/,
+    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z\s0-9-]+\.[a-zA-Z\s0-9-.]+/,
+    espacios: /^\s*$/,
+    mensaje: /(.)/
+
 }
 
 const campos = {
-  nombre: false,
-  apellido: false,
-  email:false,
-  mensaje: false
+
+    nombre: false,
+    apellido: false,
+    email:false,
+    mensaje: false
+
 }
 
 const validarFormulario = (event) => {
 
-  switch (event.target.name) {
+    switch (event.target.name) {
 
-    case "nombre":
-      validarCampos(validaciones.nombre, event.target, 'nombre');
-    break;
+        case "nombre":
+        validarCampos(validaciones.nombre, event.target, 'nombre');
+        break;
 
-    case "apellido":
-      validarCampos(validaciones.apellido, event.target, 'apellido');
-    break;
+        case "apellido":
+        validarCampos(validaciones.apellido, event.target, 'apellido');
+        break;
 
-    case "email":
-      validarCampos(validaciones.email, event.target, 'email');
-    break;
+        case "email":
+        validarCampos(validaciones.email, event.target, 'email');
+        break;
+        
+        case "mensaje":
+        validarCampos(validaciones.mensaje, event.target, 'mensaje');
+        break;
+
+    }
     
-    case "mensaje":
-      validarCampos(validaciones.mensaje, event.target, 'mensaje');
-    break;
-
-  }
 }
 
 inputs.forEach(input => {
-  input.addEventListener("keyup", validarFormulario);
+
+    input.addEventListener("keyup", validarFormulario);
+
 })
 
 const validarCampos = (expresion, input, campo) => {
-  if(input.value == "" || (validaciones.espacios).test(input.value)) {
 
-    document.querySelector(`.campo-${campo} .formulario__estado-${campo}`).classList.remove("fa-circle-xmark");
-    document.querySelector(`.campo-${campo} .formulario__estado-${campo}`).classList.remove("fa-circle-check");
-    document.querySelector(`.formulario__${campo}`).classList.remove("activo");
+    if(input.value == "" || (validaciones.espacios).test(input.value)) {
 
-  } else {
+        document.querySelector(`.campo-${campo} .formulario__estado-${campo}`).classList.remove("fa-circle-xmark");
+        document.querySelector(`.campo-${campo} .formulario__estado-${campo}`).classList.remove("fa-circle-check");
+        document.querySelector(`.formulario__${campo}`).classList.remove("activo");
 
-    if(expresion.test(input.value)) {
-      document.querySelector(`.campo-${campo}`).classList.remove("formulario__campo--incorrecto");
-      document.querySelector(`.campo-${campo}`).classList.add("formulario__campo--correcto");
-      document.querySelector(`.campo-${campo} .formulario__estado-${campo}`).classList.remove("fa-circle-xmark");
-      document.querySelector(`.campo-${campo} .formulario__estado-${campo}`).classList.add("fa-circle-check");
-      document.querySelector(`.formulario__${campo}`).classList.remove("activo");
-      campos[campo] = true;
     } else {
-      document.querySelector(`.campo-${campo}`).classList.remove("formulario__campo--correcto");
-      document.querySelector(`.campo-${campo}`).classList.add("formulario__campo--incorrecto");
-      document.querySelector(`.campo-${campo} .formulario__estado-${campo}`).classList.remove("fa-circle-check");
-      document.querySelector(`.campo-${campo} .formulario__estado-${campo}`).classList.add("fa-circle-xmark");
-      document.querySelector(`.formulario__${campo}`).classList.add("activo");
-      campos[campo] = false;
+
+        if(expresion.test(input.value)) {
+
+            document.querySelector(`.campo-${campo}`).classList.remove("formulario__campo--incorrecto");
+            document.querySelector(`.campo-${campo}`).classList.add("formulario__campo--correcto");
+            document.querySelector(`.campo-${campo} .formulario__estado-${campo}`).classList.remove("fa-circle-xmark");
+            document.querySelector(`.campo-${campo} .formulario__estado-${campo}`).classList.add("fa-circle-check");
+            document.querySelector(`.formulario__${campo}`).classList.remove("activo");
+            campos[campo] = true;
+
+        } else {
+
+            document.querySelector(`.campo-${campo}`).classList.remove("formulario__campo--correcto");
+            document.querySelector(`.campo-${campo}`).classList.add("formulario__campo--incorrecto");
+            document.querySelector(`.campo-${campo} .formulario__estado-${campo}`).classList.remove("fa-circle-check");
+            document.querySelector(`.campo-${campo} .formulario__estado-${campo}`).classList.add("fa-circle-xmark");
+            document.querySelector(`.formulario__${campo}`).classList.add("activo");
+            campos[campo] = false;
+
+        }    
+
     }
-  }
+
 }
 
 formulario.addEventListener("submit", (event) => {
 
   event.preventDefault();
 
-  if(campos.nombre && campos.apellido && campos.email && campos.mensaje) {
-    document.querySelector(".formulario__estado-valido").classList.add("activo");
-    setTimeout(() => {document.querySelector(".formulario__estado-valido").classList.remove("activo")},2500);
+    if(campos.nombre && campos.apellido && campos.email && campos.mensaje) {
+
+        document.querySelector(".formulario__estado-valido").classList.add("activo");
+        setTimeout(() => {document.querySelector(".formulario__estado-valido").classList.remove("activo")},2500);
     
     inputs.forEach(input => {
-      input.parentNode.classList.remove("focus");
-      input.parentNode.classList.remove("formulario__campo--correcto");
-      campos[input.name] = false;
+
+        input.parentNode.classList.remove("focus");
+        input.parentNode.classList.remove("formulario__campo--correcto");
+        campos[input.name] = false;
+
     })
 
     formulario.reset();
 
-  } else {
-    inputs.forEach(input => {
-      if(input.value == "" || (validaciones.espacios).test(input.value)) {
-        document.querySelector(`.formulario__vacio-${input.name}`).classList.add("activo");
-        setTimeout(() => {document.querySelector(`.formulario__vacio-${input.name}`).classList.remove("activo")},2500);
-      } else {
-        document.querySelector(`.formulario__vacio-${input.name}`).classList.remove("activo");
-      }
-    })
-  }
-})
+    } else {
+    
+        inputs.forEach(input => {
 
+            if(input.value == "" || (validaciones.espacios).test(input.value)) {
+
+                document.querySelector(`.formulario__vacio-${input.name}`).classList.add("activo");
+                setTimeout(() => {document.querySelector(`.formulario__vacio-${input.name}`).classList.remove("activo")},2500);
+
+            } else {
+                
+                document.querySelector(`.formulario__vacio-${input.name}`).classList.remove("activo");
+
+            }
+
+        })
+
+    }
+    
+})
