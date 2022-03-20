@@ -143,7 +143,6 @@ formulario.addEventListener("submit", (event) => {
         document.querySelector(`.formulario__vacio-${input.name}`).classList.remove("activo");
       }
     })
-    document.querySelector(".formulario__estado-invalido").classList.add("activo");
-    setTimeout(() => {document.querySelector(".formulario__estado-invalido").classList.remove("activo")},2500);
   }
 })
+
