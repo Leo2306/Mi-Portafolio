@@ -128,6 +128,83 @@ h1, h2, h3, h4 {
     fill: var(--principal);
 }
 
+.navegacion__set {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+    position: relative;
+}
+
+/* ----- COLORES ----- */
+
+.colores__contenido {
+    padding: .5rem .5rem;
+    border-radius: 0 .5rem .5rem 0;
+    cursor: pointer;
+}
+
+.colores__contenido .colores__icono {
+    color: var(--principal);
+}
+
+.colores__lista {
+    display: none;
+    margin: 0;
+    position: absolute;
+    background-color: var(--gris);
+    border-radius: 5rem;
+    top: 7.5rem;
+    left: -4.8rem;
+    padding: .5rem;
+}
+
+.colores__lista.open {
+    display: flex;
+}
+
+.colores__lista::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 1.2rem solid transparent;
+    border-right: 1.2rem solid transparent;
+    border-bottom: 1.2rem solid var(--gris);
+    position: absolute;
+    top: -1rem;
+    left: 5rem;
+}
+
+.colores__lista .colores__item {
+    padding: 1.5rem;
+    border-radius: 50%;
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.colores__item:hover {
+    box-shadow: 0 0 5px var(--blanco);
+}
+
+.colores__item:nth-child(1) {
+    background-color: var(--current);
+}
+
+.colores__item:nth-child(2) {
+    background-color: var(--ruby);
+}
+
+.colores__item:nth-child(3) {
+    background-color: var(--lightGreen);
+}
+
+.colores__item:nth-child(4) {
+    background-color: var(--violet);
+}
+
+.colores__item:nth-child(5) {
+    background-color: var(--blue);
+}
+
 .navegacion__menu {
     position: relative;
 }
@@ -192,66 +269,6 @@ h1, h2, h3, h4 {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-}
-
-/* ----- COLORES ----- */
-
-.colores {
-    position: fixed;
-    top: 15%;
-    left: -4rem;
-    transition: .5s ease-in-out;
-}
-
-.colores.open {
-    left: 0;
-}
-
-.colores__contenido {
-    position: absolute;
-    background-color: var(--blanco);
-    padding: .5rem 1rem;
-    border-radius: 0 .5rem .5rem 0;
-    cursor: pointer;
-    left: 4rem;
-}
-
-.colores__contenido .colores__icono {
-    color: var(--fondo);
-}
-
-.colores__lista {
-    margin: 0;
-    position: absolute;
-    background-color: var(--blanco);
-    border-radius: 0 0 .5rem;
-}
-
-.colores__lista .colores__item {
-    padding: 1.5rem;
-    border-radius: 50%;
-    margin: .5rem;
-    cursor: pointer;
-}
-
-.colores__item:nth-child(1) {
-    background-color: var(--current);
-}
-
-.colores__item:nth-child(2) {
-    background-color: var(--ruby);
-}
-
-.colores__item:nth-child(3) {
-    background-color: var(--lightGreen);
-}
-
-.colores__item:nth-child(4) {
-    background-color: var(--violet);
-}
-
-.colores__item:nth-child(5) {
-    background-color: var(--blue);
 }
 
 /* ----- REDES ----- */
@@ -861,6 +878,16 @@ h1, h2, h3, h4 {
 
     .navegacion {
         padding: 1rem 2.5rem;
+    }
+
+    .colores__lista {
+        top: 5.5rem;
+        left: -16rem;
+        padding: .5rem;
+    }
+
+    .colores__lista::before {
+        left: 16.5rem;
     }
 
     .navegacion__lista {

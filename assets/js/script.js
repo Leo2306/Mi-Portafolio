@@ -56,7 +56,7 @@ enlaces.forEach(enlace => {
 
     enlace.addEventListener("click", () => {
         menuNavegacion.classList.remove("show");
-        content.classList.remove("blur");
+        contenido.classList.remove("blur");
 
     })
 });
@@ -186,22 +186,25 @@ formulario.addEventListener("submit", (event) => {
     
 })
 
-const colores = document.querySelector(".colores");
-const contenidoColores = document.querySelector(".colores__contenido");
+const lista = document.querySelector(".colores__lista");
+const colorContenido = document.querySelector(".colores__contenido");
 const colorIcono = document.querySelector(".colores__icono");
 
-contenidoColores.addEventListener("click", () => {
-    colores.classList.toggle("open");
+colorContenido.addEventListener("click", () => {
+    lista.classList.toggle("open");
 });
 
-const cambio = document.querySelectorAll(".colores__item");
+const colores = document.querySelectorAll(".colores__item");
 document.querySelector(":root").style.setProperty("--principal", "#EB4A4A");
 
-cambio.forEach(color => {
+colores.forEach(color => {
     color.addEventListener("click", () => {
         const colorActual = color.dataset.id;
         console.log(colorActual);
         document.querySelector(":root").style.setProperty("--principal", colorActual);
     })
-    
+})
+
+window.addEventListener("scroll", () => {
+    lista.classList.remove("open");
 })
