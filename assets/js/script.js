@@ -24,6 +24,35 @@ if(menuClose) {
     })
 }
 
+const lista = document.querySelector(".colores__lista");
+const colorContenido = document.querySelector(".colores__contenido");
+const colorIcono = document.querySelector(".colores__icono");
+
+colorContenido.addEventListener("click", () => {
+
+    lista.classList.toggle("open");
+
+});
+
+const colores = document.querySelectorAll(".colores__item");
+document.querySelector(":root").style.setProperty("--principal", "#EB4A4A");
+
+colores.forEach(color => {
+
+    color.addEventListener("click", () => {
+        const colorActual = color.dataset.id;
+        document.querySelector(":root").style.setProperty("--principal", colorActual);
+        
+    })
+
+})
+
+window.addEventListener("scroll", () => {
+
+    lista.classList.remove("open");
+    
+})
+
 const inputs = document.querySelectorAll(".formulario__input");
 
 function focusFunc() {
@@ -184,27 +213,4 @@ formulario.addEventListener("submit", (event) => {
 
     }
     
-})
-
-const lista = document.querySelector(".colores__lista");
-const colorContenido = document.querySelector(".colores__contenido");
-const colorIcono = document.querySelector(".colores__icono");
-
-colorContenido.addEventListener("click", () => {
-    lista.classList.toggle("open");
-});
-
-const colores = document.querySelectorAll(".colores__item");
-document.querySelector(":root").style.setProperty("--principal", "#EB4A4A");
-
-colores.forEach(color => {
-    color.addEventListener("click", () => {
-        const colorActual = color.dataset.id;
-        console.log(colorActual);
-        document.querySelector(":root").style.setProperty("--principal", colorActual);
-    })
-})
-
-window.addEventListener("scroll", () => {
-    lista.classList.remove("open");
 })
