@@ -172,10 +172,11 @@ const validarCampos = (expresion, input, campo) => {
         }    
 
     }
-
 }
 
-formulario.addEventListener("submit", (event) => {
+formulario.addEventListener("submit", enviarFormulario);
+
+function enviarFormulario (event) {
 
   event.preventDefault();
 
@@ -192,16 +193,31 @@ formulario.addEventListener("submit", (event) => {
 
     })
 
+    const data = new FormData(formulario);
+
+    fetch('../../post.php',{
+        method: 'POST',
+        body: data
+    })
+
+    .then( res => res.json())
+
+    Swal.fire(
+        'Mensaje enviado con éxito!',
+        'Me comunicaré contigo a la brevedad',
+        'success'
+    )
+      
     formulario.reset();
 
     } else {
-    
+
         inputs.forEach(input => {
 
             if(input.value == "" || (validaciones.espacios).test(input.value)) {
-
                 document.querySelector(`.formulario__vacio-${input.name}`).classList.add("activo");
                 setTimeout(() => {document.querySelector(`.formulario__vacio-${input.name}`).classList.remove("activo")},2500);
+                return;
 
             } else {
                 
@@ -212,5 +228,4 @@ formulario.addEventListener("submit", (event) => {
         })
 
     }
-    
-})
+}

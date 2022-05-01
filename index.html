@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -167,7 +168,7 @@
 
                         </ul>
 
-                        <a href="CV/Leonardo-Narvaja_CV.pdf" class="btn about__btn">Descargar CV<i class="fa-solid fa-download"></i></a>
+                        <a href="CV/Leonardo-Narvaja_CV.pdf" target="_blank" class="btn about__btn">Descargar CV<i class="fa-solid fa-download"></i></a>
 
                     </div>
 
@@ -431,7 +432,7 @@
 
                 </div>
 
-                <form name="contact" class="contacto__formulario" method="POST" autocomplete="off" novalidate data-netlify="true">
+                <form class="contacto__formulario" autocomplete="off" novalidate>
                 
                     <div class="formulario__campo campo-nombre">
                         <input type="text" name="nombre" class="formulario__input" placeholder="Ej: Carlos">
@@ -469,9 +470,9 @@
                         <button type="submit" class="btn formulario__btn">Enviar</button>
                         <span class="formulario__estado-valido">*Formulario enviado con éxito</span>
                     </div>
-                </form>   
+                </form>
 
-            </div>    
+            </div>
 
         </section>
 
@@ -487,7 +488,7 @@
            
     </footer>
     
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <script src="https://kit.fontawesome.com/b545c92e40.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
